@@ -6,13 +6,13 @@ var app = express();
 var port = process.env.PORT || 3000;
 
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
-server.set('view engine', 'handlebars');
+app.set('view engine', 'handlebars');
 app.get('/', function(req, res, next){
   next();
 }
 app.get('*', function(req, res){
   res.status(404).render('404');
 });
-server.listen(port, function){
+app.listen(port, function){
   console.log("Server is running!");
 }
