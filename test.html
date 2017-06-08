@@ -3,7 +3,7 @@
   <head>
 
     <meta charset="utf-8">
-    <title>Tweeter</title>
+    <title>Cash4U</title>
 
     <!-- This is a stylesheet that includes the font you should use -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700" rel="stylesheet">
@@ -34,115 +34,115 @@
       </nav>
     </header>
 
-    <main class="twit-container">
+    <main class="entry-container">
 
-      <article class="twit">
-        <div class="twit-icon">
-          <i class="fa fa-bullhorn"></i>
+      <article class="entry">
+        <div class="entry-icon">
+          <i class="fa fa-money"></i>
         </div>
-        <div class="twit-content">
-          <p class="twit-text">
+        <div class="entry-content">
+          <p class="entry-amount">
             Sitting in web dev... This class is so awesome!
           </p>
-          <p class="twit-attribution">
+          <p class="entry-name">
             <a href="#">CSMajor2017</a>
           </p>
         </div>
       </article>
 
-      <article class="twit">
-        <div class="twit-icon">
-          <i class="fa fa-bullhorn"></i>
+      <article class="entry">
+        <div class="entry-icon">
+          <i class="fa fa-money"></i>
         </div>
-        <div class="twit-content">
-          <p class="twit-text">
+        <div class="entry-content">
+          <p class="entry-amount">
             Anyone watch the baseball game last night?  The Beavs are still in 1st place!
           </p>
-          <p class="twit-attribution">
+          <p class="entry-name">
             <a href="#">BeaverBeliever</a>
           </p>
         </div>
       </article>
 
-      <article class="twit">
-        <div class="twit-icon">
-          <i class="fa fa-bullhorn"></i>
+      <article class="entry">
+        <div class="entry-icon">
+          <i class="fa fa-money"></i>
         </div>
-        <div class="twit-content">
-          <p class="twit-text">
+        <div class="entry-content">
+          <p class="entry-amount">
             A body in motion must remain in motion unless acted upon by an outside force.
           </p>
-          <p class="twit-attribution">
+          <p class="entry-amount">
             <a href="#">NewtonRulez</a>
           </p>
         </div>
       </article>
 
-      <article class="twit">
-        <div class="twit-icon">
-          <i class="fa fa-bullhorn"></i>
+      <article class="entry">
+        <div class="entry-icon">
+          <i class="fa fa-money"></i>
         </div>
-        <div class="twit-content">
-          <p class="twit-text">
+        <div class="entry-content">
+          <p class="entry-amount">
             Huh?
           </p>
-          <p class="twit-attribution">
+          <p class="entry-name">
             <a href="#">ConfusedTweeterer</a>
           </p>
         </div>
       </article>
 
-      <article class="twit">
-        <div class="twit-icon">
-          <i class="fa fa-bullhorn"></i>
+      <article class="entry">
+        <div class="entry-icon">
+          <i class="fa fa-money"></i>
         </div>
-        <div class="twit-content">
-          <p class="twit-text">
+        <div class="entry-content">
+          <p class="entry-amount">
             Why did the calf cross the road?
           </p>
-          <p class="twit-attribution">
+          <p class="entry-name">
             <a href="#">Setup</a>
           </p>
         </div>
       </article>
 
-      <article class="twit">
-        <div class="twit-icon">
-          <i class="fa fa-bullhorn"></i>
+      <article class="entry">
+        <div class="entry-icon">
+          <i class="fa fa-money"></i>
         </div>
-        <div class="twit-content">
-          <p class="twit-text">
+        <div class="entry-content">
+          <p class="entry-amount">
             To get to the udder side!
           </p>
-          <p class="twit-attribution">
+          <p class="entry-name">
             <a href="#">Punchline</a>
           </p>
         </div>
       </article>
 
-      <article class="twit">
-        <div class="twit-icon">
-          <i class="fa fa-bullhorn"></i>
+      <article class="entry">
+        <div class="entry-icon">
+          <i class="fa fa-money"></i>
         </div>
-        <div class="twit-content">
-          <p class="twit-text">
+        <div class="entry-content">
+          <p class="entry-amount">
             Any questions about flexboxes?
           </p>
-          <p class="twit-attribution">
+          <p class="entry-name">
             <a href="#">Hess</a>
           </p>
         </div>
       </article>
 
-      <article class="twit">
-        <div class="twit-icon">
-          <i class="fa fa-bullhorn"></i>
+      <article class="entry">
+        <div class="entry-icon">
+          <i class="fa fa-money"></i>
         </div>
-        <div class="twit-content">
-          <p class="twit-text">
+        <div class="entry-content">
+          <p class="entry-amount">
             Friendly reminder: your taxes were due yesterday.
           </p>
-          <p class="twit-attribution">
+          <p class="entry-name">
             <a href="#">TheIRS</a>
           </p>
         </div>
@@ -150,38 +150,104 @@
 
     </main>
 
-    <button type="button" id="create-twit-button"><i class="fa fa-plus"></i></button>
+    <button type="button" id="create-entry-button"><i class="fa fa-paper-plane"></i></button>
 
     <div id="modal-backdrop" class="hidden"></div>
-    <div id="create-twit-modal" class="hidden">
+    <div id="create-entry-modal" class="hidden">
       <div class="modal-dialog">
 
         <div class="modal-header">
-          <h3>Create a Twit</h3>
+          <h3>Send funds</h3>
           <button type="button" class="modal-close-button">&times;</button>
         </div>
 
         <div class="modal-body">
-          <div class="twit-input-element">
-            <label for="twit-text-input">Twit text</label>
-            <textarea id="twit-text-input"></textarea>
+          <div class="entry-input-element">
+            <label for="entry-amount-input">Amount to send: $</label>
+            <textarea id="entry-amount-input"></textarea>
           </div>
-          <div class="twit-input-element">
-            <label for="twit-attribution-input">Author</label>
-            <input type="text" id="twit-attribution-input">
+          <div class="entry-input-element">
+            <label for="entry-name-input">Name of recipient: </label>
+            <input type="text" id="entry-name-input">
+          </div>
+          <div class="entry-input-element">
+            <label for="entry-description-input">Description: </label>
+            <input type="text" id="entry-description-input">
           </div>
         </div>
 
         <div class="modal-footer">
           <button type="button" class="modal-cancel-button">Cancel</button>
-          <button type="button" class="modal-accept-button">Create Twit</button>
+          <button type="button" class="modal-accept-button">Send funds</button>
         </div>
 
       </div>
     </div>
 
+        <button type="button" id="create-entry-button"><i class="fa fa-plus"></i></button>
+
+    <div id="modal-backdrop" class="hidden"></div>
+    <div id="create-entry-modal" class="hidden">
+      <div class="modal-dialog">
+
+        <div class="modal-header">
+          <h3>Deposit</h3>
+          <button type="button" class="modal-close-button">&times;</button>
+        </div>
+
+        <div class="modal-body">
+          <div class="entry-input-element">
+            <label for="entry-amount-input">Amount to deposit: $</label>
+            <textarea id="entry-amount-input"></textarea>
+          </div>
+          <div class="entry-input-element">
+            <label for="entry-description-input">Description: </label>
+            <input type="text" id="entry-description-input">
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="modal-cancel-button">Cancel</button>
+          <button type="button" class="modal-accept-button">Deposit</button>
+        </div>
+
+      </div>
+    </div>
+    
+        <button type="button" id="create-entry-button"><i class="fa fa-minus"></i></button>
+
+    <div id="modal-backdrop" class="hidden"></div>
+    <div id="create-entry-modal" class="hidden">
+      <div class="modal-dialog">
+
+        <div class="modal-header">
+          <h3>Withdraw</h3>
+          <button type="button" class="modal-close-button">&times;</button>
+        </div>
+
+        <div class="modal-body">
+          <div class="entry-input-element">
+            <label for="entry-amount-input">Amount to withdraw: $</label>
+            <textarea id="entry-amount-input"></textarea>
+          </div>
+          <div class="entry-input-element">
+            <label for="entry-description-input">Description: </label>
+            <input type="text" id="entry-description-input">
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="modal-cancel-button">Cancel</button>
+          <button type="button" class="modal-accept-button">Withdraw</button>
+        </div>
+
+      </div>
+    </div>
+    
+    
+    
   </body>
 
-  <script src="/index.js" charset="utf-8"></script>
+  <script src="/fp.js" charset="utf-8"></script>
 
 </html>
