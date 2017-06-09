@@ -119,7 +119,7 @@ function insertNewEntry() {
    */
   if ((entryAmount && entryName && entryDesc) || (entryAmount && entryDesc)) {
 
-      var newEntryElem = generateNewEntryElem(entryAmount, entryName);
+      var newEntryElem = generateNewEntryElem(entryAmount, entryName, entryDesc);
       var entryContainer = document.querySelector('.entry-container');
       entryContainer.insertAdjacentHTML('beforeend', newEntryElem);
       allEntryElems.push(newEntryElem);
