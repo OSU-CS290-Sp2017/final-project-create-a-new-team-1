@@ -102,8 +102,8 @@ a:focus {
       padding: 5px;
       display: flex;
       position: fixed;
-      right: 30px;
-      bottom: 300px;
+      right: 75px;
+      top: 100px;
       width: 160px;
       background-color: #d8ead3;
       border-style:groove;
