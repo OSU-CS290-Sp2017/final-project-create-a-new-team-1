@@ -325,6 +325,7 @@ a:focus {
   font-weight: 600;
   flex: 1 75px;
   margin-right: 10px;
+  text-align: center;
 }
 
 .entry-input-element input,
