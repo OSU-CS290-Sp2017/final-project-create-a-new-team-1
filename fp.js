@@ -22,7 +22,7 @@ function showcreateEntryModal2() {
 
   // Show the modal and its backdrop.
   modalBackdrop.classList.remove('hidden');
-  createEntryModal.classList.remove('hidden');
+  createEntryModal2.classList.remove('hidden');
 
 }
 
@@ -51,7 +51,7 @@ function closecreateEntryModal2() {
 
   // Hide the modal and its backdrop.
   modalBackdrop.classList.add('hidden');
-  createEntryModal.classList.add('hidden');
+  createEntryModal2.classList.add('hidden');
 
   clearEntryInputValues();
 
