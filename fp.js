@@ -18,7 +18,7 @@ function showcreateEntryModal() {
 function showcreateEntryModal2() {
 
   var modalBackdrop = document.getElementById('modal-backdrop');
-  var createEntryModal = document.getElementById('create-entry-modal2');
+  var createEntryModal2 = document.getElementById('create-entry-modal2');
 
   // Show the modal and its backdrop.
   modalBackdrop.classList.remove('hidden');
@@ -47,7 +47,7 @@ function closecreateEntryModal() {
 function closecreateEntryModal2() {
 
   var modalBackdrop = document.getElementById('modal-backdrop');
-  var createEntryModal = document.getElementById('create-entry-modal2');
+  var createEntryModal2 = document.getElementById('create-entry-modal2');
 
   // Hide the modal and its backdrop.
   modalBackdrop.classList.add('hidden');
