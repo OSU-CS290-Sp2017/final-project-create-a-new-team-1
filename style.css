@@ -98,6 +98,37 @@ a:focus {
   flex-wrap: wrap;
 }
 
+.total-container{
+      padding: 5px;
+      display: flex;
+      position: fixed;
+      right: 30px;
+      bottom: 300px;
+      width: 160px;
+      background-color: #d8ead3;
+      border-style:groove;
+      border-color: #b7c6b3;
+}
+
+.total-content{
+      flex: 1 1 80%;
+      margin-left: 10px;
+
+}
+
+.total-have{
+      text-align: center;
+}
+
+
+
+
+.total-amount{
+      font-weight: bold;
+      color: #85e86a;
+      text-align: center;
+}
+
 .entry {
   flex: 0 1 80%;
   display: flex;
@@ -110,6 +141,11 @@ a:focus {
 
 .entry-icon {
   font-size: 24px;
+}
+
+.entry-icon2 {
+  font-size: 30px;
+  color: #85e86a;
 }
 
 .entry-content {
