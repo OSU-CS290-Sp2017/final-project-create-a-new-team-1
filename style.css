@@ -361,8 +361,13 @@ a:focus {
 }
 
 .modal-footer .modal-accept-button {
-  background-color: #57b50c;
-  color: #fff;
+  background-color: #28e604;
+  color: #333;
+}
+
+.modal-footer .modal-accept-button2 {
+  background-color: #00c561;
+  color: #333;
 }
 
 .modal-footer .modal-accept-button:hover {
