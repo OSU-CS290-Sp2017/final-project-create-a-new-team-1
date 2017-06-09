@@ -139,7 +139,7 @@ function insertNewEntry() {
  * Display all entrys if the search query is empty.
  */
 function doEntrySearch() {
-
+      console.log("In do entry search");
   // Grab the search query, make sure it's not null, and do some preproessing.
   var searchQuery = document.getElementById('navbar-search-input').value;
   searchQuery = searchQuery ? searchQuery.trim().toLowerCase() : '';
@@ -205,25 +205,8 @@ window.addEventListener('DOMContentLoaded', function () {
   searchInput.addEventListener('input', doEntrySearch);
 
 });
+var searchButton = document.getElementById('navbar-search-button');
+searchButton.addEventListener('click', doEntrySearch);
 
-var searchBar = document.getElementById('navbar-search-input')
-var searchButton = document.getElementById('navbar-search-button')
-
-function handleSearch(event){
-      var twits = document.getElementsByClassName('twit');
-      var searchTerm = document.getElementById('navbar-search-input').value;
-      var twitTexts = document.getElementsByClassName('twit-text');
-      var author = document.getElementsByClassName('twit-attribution');
-
-      for(var i = 0; i < twits.length; i++){
-            if(twitTexts[i].textContent.toLowerCase().indexOf(searchTerm.toLowerCase()) === -1 && author[i].textContent.toLowerCase().indexOf(searchTerm.toLowerCase()) === -1){
-                  twits[i].classList.add('hidden');
-            }else{
-                  twits[i].classList.remove('hidden');
-            }
-      }
-
-}
-
-searchBar.addEventListener('input', handleSearch);
-searchButton.addEventListener('click', handleSearch);
+var searchInput = document.getElementById('navbar-search-input');
+searchInput.addEventListener('input', doEntrySearch);
