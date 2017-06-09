@@ -1,5 +1,5 @@
 body {
-  font-family: lato, Helvetica, sans-serif;
+  font-family: Lato, Helvetica, sans-serif;
   margin: 0;
   background-color: #eee;
 }
@@ -102,12 +102,12 @@ a:focus {
       padding: 5px;
       display: flex;
       position: fixed;
-      right: 75px;
+      right: 10px;
       top: 100px;
-      width: 160px;
-      background-color: #d8ead3;
+      width: 120px;
+      background-color: #ffffff;
       border-style:groove;
-      border-color: #b7c6b3;
+      border-color: #dadada;
 }
 
 .total-content{
@@ -120,12 +120,9 @@ a:focus {
       text-align: center;
 }
 
-
-
-
 .total-amount{
       font-weight: bold;
-      color: #85e86a;
+      color: #57b50c;
       text-align: center;
 }
 
@@ -141,12 +138,12 @@ a:focus {
 
 .entry-icon {
   font-size: 24px;
-  color: #0f0;
+  color: #57b50c;
 }
 
 .entry-icon2 {
   font-size: 30px;
-  color: #85e86a;
+  color: #57b50c;
 }
 
 .entry-content {
@@ -158,7 +155,7 @@ a:focus {
   margin: 0;
 }
 
-.entry-content .entry-attribution {
+.entry-content .entry-name {
   margin-top: 8px;
   text-align: right;
   font-weight: bold;
@@ -268,6 +265,16 @@ a:focus {
   overflow: scroll;
 }
 
+#create-entry-modal2 {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1010;
+  overflow: scroll;
+}
+
 .hidden {
   display: none;
 }
@@ -354,12 +361,21 @@ a:focus {
 }
 
 .modal-footer .modal-accept-button {
-  background-color: #57b50c;
-  color: #fff;
+  background-color: #28e604;
+  color: #333;
+}
+
+.modal-footer .modal-accept-button2 {
+  background-color: #00c561;
+  color: #333;
 }
 
 .modal-footer .modal-accept-button:hover {
-  background-color: #087dde;
+  background-color: #eee;
+}
+
+.modal-footer .modal-accept-button2:hover {
+  background-color: #eee;
 }
 
 .error-container {
