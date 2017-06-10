@@ -38,6 +38,17 @@ function showcreateEntryModal2() {
 
 }
 
+function showcreateEntryModal3() {
+
+  var modalBackdrop = document.getElementById('modal-backdrop');
+  var createEntryModal3 = document.getElementById('create-entry-modal3');
+
+  // Show the modal and its backdrop.
+  modalBackdrop.classList.remove('hidden');
+  createEntryModal3.classList.remove('hidden');
+
+}
+
 /*
  * This function hides the modal to create a entry and clears any existing
  * values from the input fields whenever any of the modal close actions are
@@ -64,6 +75,19 @@ function closecreateEntryModal2() {
   // Hide the modal and its backdrop.
   modalBackdrop.classList.add('hidden');
   createEntryModal2.classList.add('hidden');
+
+  clearEntryInputValues();
+
+}
+
+function closecreateEntryModal3() {
+
+  var modalBackdrop = document.getElementById('modal-backdrop');
+  var createEntryModal3 = document.getElementById('create-entry-modal3');
+
+  // Hide the modal and its backdrop.
+  modalBackdrop.classList.add('hidden');
+  createEntryModal3.classList.add('hidden');
 
   clearEntryInputValues();
 
@@ -241,7 +265,7 @@ window.addEventListener('DOMContentLoaded', function () {
   createEntryButton2.addEventListener('click', showcreateEntryModal2);
 
   var createEntryButton3 = document.getElementById('create-entry-button3');
-  createEntryButton3.addEventListener('click', showcreateEntryModal2);
+  createEntryButton3.addEventListener('click', showcreateEntryModal3);
 
   var modalCloseButton = document.querySelector('#create-entry-modal .modal-close-button');
   modalCloseButton.addEventListener('click', closecreateEntryModal);
@@ -254,6 +278,12 @@ window.addEventListener('DOMContentLoaded', function () {
 
   var modalCancalButton2 = document.querySelector('#create-entry-modal2 .modal-cancel-button');
   modalCancalButton2.addEventListener('click', closecreateEntryModal2);
+
+  var modalCloseButton3 = document.querySelector('#create-entry-modal3 .modal-close-button');
+  modalCloseButton3.addEventListener('click', closecreateEntryModal3);
+
+  var modalCancalButton3 = document.querySelector('#create-entry-modal3 .modal-cancel-button');
+  modalCancalButton3.addEventListener('click', closecreateEntryModal3);
 
   var modalAcceptButton2 = document.querySelector('#create-entry-modal .modal-accept-button2');
   modalAcceptButton2.addEventListener('click', insertNewEntry);
