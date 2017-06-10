@@ -208,13 +208,21 @@ function insertNewEntry3() {
    * Only generate the new entry if the user supplied values for both the entry
    * amount and the entry description. Give an alert if they aren't filled out.
    */
-  if(entryAmount && entryDesc) {
+  if(total - entryAmount < 0){
+        var stringWarning = "You can only withdraw at most $" + total + "!";
+        window.alert(stringWarning);
+ }else if(isNaN(entryAmount)){
+      window.alert("The entry amount should be a number!");
+}else if(entryAmount && entryDesc) {
 
     var newEntryElem = generateNewEntryElem2(entryAmount, entryDesc);
       var entryContainer = document.querySelector('.entry-container');
       entryContainer.insertAdjacentHTML('afterbegin', newEntryElem);
       allEntryElems.push(newEntryElem);
 
+      total -= entryAmount;
+      total=parseFloat(Math.round(total * 100) / 100).toFixed(2);
+      x[0].innerText=total;
       closecreateEntryModal3();
   }
 
@@ -224,7 +232,6 @@ function insertNewEntry3() {
 
   }
 }
-
 /*
  * Perform a search over over all the entries based on the search query the user
  * entered in the navbar.  Only display entries that match the search query.
