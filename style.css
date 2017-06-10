@@ -8,6 +8,38 @@ a {
   text-decoration: none;
 }
 
+.logs{
+  /*
+  background-image:url('banner.jpg');
+  margin:0px;
+  display: block;
+  -webkit-filter: blur(2px);
+  filter: blur(2px);
+  width: 100%;
+  background-size: 100%;
+  background-image: no-repeat;
+  background-position: center;
+  */
+  /*height: 250px;/*250px is perfect height for banner pic*/
+
+}
+
+.logs-header{
+  background-color: #28e604 ;
+  width: 100%;
+  margin-top:15px;
+  margin-bottom: 0px; /*delete if h1 connects to content*/
+  text-align: center;
+  font-family: lato, Helvetica, sans-serif;
+  font-weight:normal;
+  letter-spacing: 4px;
+  color: white;
+}
+.logs-header:hover{
+    background-color: #82fd6b;
+    color:black;
+}
+
 .site-title {
   margin: 0;
   padding: 10px 20px;
@@ -93,7 +125,7 @@ a:focus {
 }
 
 .entry-container {
-  margin: 50px 10%;
+  margin: 18px 10%; /*Originally 50px 10%*/
   display: flex;
   flex-wrap: wrap;
 }
@@ -130,7 +162,7 @@ a:focus {
 #create-entry-button1 {
   position: fixed;
   right: 30px;
-  bottom: 210px;
+  bottom: 260px;
   height: 60px;
   width: 60px;
   border: none;
@@ -145,7 +177,7 @@ a:focus {
 #create-entry-button2 {
   position: fixed;
   right: 30px;
-  bottom: 120px;
+  bottom: 170px;
   height: 60px;
   width: 60px;
   border: none;
@@ -160,7 +192,7 @@ a:focus {
 #create-entry-button3 {
   position: fixed;
   right: 30px;
-  bottom: 30px;
+  bottom: 80px;
   height: 60px;
   width: 60px;
   border: none;
@@ -295,6 +327,56 @@ a:focus {
   min-height: 64px;
 }
 
+.subtitle-1{
+  margin-left: 200px;
+  float: right;
+  font-size: 12px;
+  color:#fff;
+}
+
+footer{
+  width: 100%;
+  background-color:#222;
+  padding: 60px 0px;
+  padding-top: 0px;
+  margin-top: 100px;
+}
+
+footer nav{
+  float: left;
+
+}
+
+footer nav ul{
+}
+
+footer nav ul li{
+  display: inline-block;
+  margin-left: 20px;
+  list-style: none;
+}
+
+footer nav ul li a{
+  font-family: Lato;
+  font-weight: 400;
+  font-size: 14px;
+  color:#fff;
+  text-align: center;
+}
+/*
+#nav{
+  text-align: justify;
+  min-width: 500px;
+}
+#nav:after{
+  content: '';
+  display: inline-block;
+  width: 100%;
+}
+#nav li{
+  display: inline-block;
+}
+*/
 .modal-footer {
   display: flex;
   justify-content: flex-end;
