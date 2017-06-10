@@ -147,9 +147,6 @@ function insertNewEntry() {
   var entryAmount = document.getElementById('entry-amount-input').value;
   var entryName = document.getElementById('entry-name-input').value;
   var entryDesc = document.getElementById('entry-description-input').value;
-  console.log(entryAmount);
-  console.log(entryName);
-  console.log(entryDesc);
   /*
    * Only generate the new entry if the user supplied values for the entry
    * amount, entry name and entry description.
@@ -184,11 +181,6 @@ function insertNewEntry2() {
 console.log("inside second new entry");
   var entryAmount = document.getElementById('entry-amount-input2').value;
   var entryDesc = document.getElementById('entry-description-input2').value;
-  console.log(entryAmount)
-  console.log(entryDesc)
-
-  var entryAmount = document.getElementById('entry-amount-input2').value;
-  var entryDesc = document.getElementById('entry-description-input2').value;
   /*
    * Only generate the new entry if the user supplied values for both the entry
    * amount and the entry description. Give an alert if they aren't filled out.
@@ -213,8 +205,6 @@ function insertNewEntry3() {
 
   var entryAmount = document.getElementById('entry-amount-input3').value;
   var entryDesc = document.getElementById('entry-description-input3').value;
-  var entryAmount = document.getElementById('entry-amount-input').value;
-  var entryDesc = document.getElementById('entry-description-input').value;
   /*
    * Only generate the new entry if the user supplied values for both the entry
    * amount and the entry description. Give an alert if they aren't filled out.
