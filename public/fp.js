@@ -123,7 +123,9 @@ function insertNewEntry() {
   var entryAmount = document.getElementById('entry-amount-input').value;
   var entryName = document.getElementById('entry-name-input').value;
   var entryDesc = document.getElementById('entry-description-input').value;
-
+  console.log(entryAmount)
+  console.log(entryName)
+  console.log(entryDesc)
   /*
    * Only generate the new entry if the user supplied values for both the entry
    * text and the entry attribution.  Give them an alert if they didn't.
@@ -218,7 +220,10 @@ window.addEventListener('DOMContentLoaded', function () {
   var modalCancalButton2 = document.querySelector('#create-entry-modal2 .modal-cancel-button');
   modalCancalButton2.addEventListener('click', closecreateEntryModal2);
 
-  var modalAcceptButton = document.querySelector('#create-entry-modal .modal-accept-button');
+  var modalAcceptButton2 = document.querySelector('#create-entry-modal .modal-accept-button2');
+  modalAcceptButton2.addEventListener('click', insertNewEntry);
+
+  var modalAcceptButton = document.querySelector('#create-entry-modal2 .modal-accept-button');
   modalAcceptButton.addEventListener('click', insertNewEntry);
 
   var searchButton = document.getElementById('navbar-search-button');
