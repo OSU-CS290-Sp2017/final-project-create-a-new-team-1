@@ -38,6 +38,7 @@ function showcreateEntryModal2() {
   createEntryModal2.classList.remove('hidden');
 
 }
+  // Function will hide the modal and clears values inside the input fields when closed
 
 function showcreateEntryModal3() {
 
@@ -60,7 +61,7 @@ function closecreateEntryModal() {
   var modalBackdrop = document.getElementById('modal-backdrop');
   var createEntryModal = document.getElementById('create-entry-modal');
 
-  // Hide the modal and its backdrop.
+  // Hide the modal and its backdrop
   modalBackdrop.classList.add('hidden');
   createEntryModal.classList.add('hidden');
 
@@ -73,7 +74,7 @@ function closecreateEntryModal2() {
   var modalBackdrop = document.getElementById('modal-backdrop');
   var createEntryModal2 = document.getElementById('create-entry-modal2');
 
-  // Hide the modal and its backdrop.
+  // Hide the modal and its backdrop
   modalBackdrop.classList.add('hidden');
   createEntryModal2.classList.add('hidden');
 
@@ -81,6 +82,7 @@ function closecreateEntryModal2() {
 
 }
 
+  // This function clears any value present in any of the entry input elements
 function closecreateEntryModal3() {
 
   var modalBackdrop = document.getElementById('modal-backdrop');
@@ -108,23 +110,8 @@ function clearEntryInputValues() {
 }
 
 /*
- * Create and return a new HTML element representing a single entry, given the
- * entry text and entry attribution as arguments.  The entry element has the
- * following structure:
- *
- * <article class="entry">
- *   <div class="entry-icon">
- *     <i class="fa fa-bullhorn"></i>
- *   </div>
- *   <div class="entry-content">
- *     <p class="entry-text">
- *       {{entryAmount}}
- *     </p>
- *     <p class="entry-attribution">
- *       <a href="#">{{entryName}}</a>
- *     </p>
- *   </div>
- * </article>
+ * Creates and returns a new HTML element representing a single entry when given
+ * the two or three necessary arguments
  */
 
 function generateNewEntryElem(entryAmount, entryName, entryDesc) {
@@ -160,12 +147,12 @@ function insertNewEntry() {
   var entryAmount = document.getElementById('entry-amount-input').value;
   var entryName = document.getElementById('entry-name-input').value;
   var entryDesc = document.getElementById('entry-description-input').value;
-  console.log(entryAmount)
-  console.log(entryName)
-  console.log(entryDesc)
+  console.log(entryAmount);
+  console.log(entryName);
+  console.log(entryDesc);
   /*
-   * Only generate the new entry if the user supplied values for both the entry
-   * text and the entry attribution.  Give them an alert if they didn't.
+   * Only generate the new entry if the user supplied values for the entry
+   * amount, entry name and entry description.
    */
    if(total - entryAmount < 0) {
          var stringWarning = "You can only transfer at most $" + total + "!";
@@ -193,14 +180,20 @@ function insertNewEntry() {
   }
 }
 function insertNewEntry2() {
+<<<<<<< HEAD
 console.log("inside second new entry");
   var entryAmount = document.getElementById('entry-amount-input2').value;
   var entryDesc = document.getElementById('entry-description-input2').value;
   console.log(entryAmount)
   console.log(entryDesc)
+=======
+
+  var entryAmount = document.getElementById('entry-amount-input').value;
+  var entryDesc = document.getElementById('entry-description-input').value;
+>>>>>>> 344bb27b6d47525717387bd52400c3d33e09a7c7
   /*
    * Only generate the new entry if the user supplied values for both the entry
-   * text and the entry attribution.  Give them an alert if they didn't.
+   * amount and the entry description. Give an alert if they aren't filled out.
    */
   if(entryAmount && entryDesc) {
 
@@ -220,24 +213,24 @@ console.log("inside second new entry");
 }
 
 /*
- * Perform a search over over all the entrys based on the search query the user
- * entered in the navbar.  Only display entrys that match the search query.
- * Display all entrys if the search query is empty.
+ * Perform a search over over all the entries based on the search query the user
+ * entered in the navbar.  Only display entries that match the search query.
+ * Display all entries if the search query is empty.
  */
 function doEntrySearch() {
       console.log("In do entry search");
-  // Grab the search query, make sure it's not null, and do some preproessing.
+  // Grab the search query, make sure it's not null, and do some preprocessing.
   var searchQuery = document.getElementById('navbar-search-input').value;
   searchQuery = searchQuery ? searchQuery.trim().toLowerCase() : '';
 
-  // Remove all entrys from the entry container temporarily.
+  // Remove all entries from the entry container temporarily.
   var entryContainer = document.querySelector('.entry-container');
   while (entryContainer.lastChild) {
     entryContainer.removeChild(entryContainer.lastChild);
   }
 
   /*
-   * Loop through the collection of all entrys and add entrys back into the DOM
+   * Loop through the collection of all entries and add entries back into the DOM
    * if they contain the search term or if the search term is empty.
    */
   allEntryElems.forEach(function (entryElem) {
@@ -254,7 +247,7 @@ function doEntrySearch() {
  */
 window.addEventListener('DOMContentLoaded', function () {
 
-  // Remember all of the existing entrys in an array that we can use for search.
+  // Remember all of the existing entries in an array that we can use for search.
   var entryElemsCollection = document.getElementsByClassName('entry');
   for (var i = 0; i <entryElemsCollection.length; i++) {
     allEntryElems.push(entryElemsCollection[i]);
