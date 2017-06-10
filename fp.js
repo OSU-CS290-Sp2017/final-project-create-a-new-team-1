@@ -233,7 +233,10 @@ window.addEventListener('DOMContentLoaded', function () {
   var modalCancalButton2 = document.querySelector('#create-entry-modal2 .modal-cancel-button');
   modalCancalButton2.addEventListener('click', closecreateEntryModal2);
 
-  var modalAcceptButton = document.querySelector('#create-entry-modal .modal-accept-button');
+  var modalAcceptButton2 = document.querySelector('#create-entry-modal .modal-accept-button2');
+  modalAcceptButton2.addEventListener('click', insertNewEntry);
+
+  var modalAcceptButton = document.querySelector('#create-entry-modal2 .modal-accept-button');
   modalAcceptButton.addEventListener('click', insertNewEntry);
 
   var searchButton = document.getElementById('navbar-search-button');
