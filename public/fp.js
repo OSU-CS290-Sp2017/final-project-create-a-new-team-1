@@ -192,7 +192,7 @@ console.log("inside second new entry");
       entryContainer.insertAdjacentHTML('afterbegin', newEntryElem);
       allEntryElems.push(newEntryElem);
 
-      closecreateEntryModal();
+      closecreateEntryModal2();
   }
 
   else {
@@ -216,7 +216,7 @@ function insertNewEntry3() {
       entryContainer.insertAdjacentHTML('afterbegin', newEntryElem);
       allEntryElems.push(newEntryElem);
 
-      closecreateEntryModal2();
+      closecreateEntryModal3();
   }
 
   else {
@@ -301,7 +301,7 @@ window.addEventListener('DOMContentLoaded', function () {
   modalAcceptButton.addEventListener('click', insertNewEntry2);
 
   var modalAcceptButton3 = document.querySelector('#create-entry-modal3 .modal-accept-button');
-  modalAcceptButton3.addEventListener('click', insertNewEntry2);
+  modalAcceptButton3.addEventListener('click', insertNewEntry3);
 
   var searchButton = document.getElementById('navbar-search-button');
   searchButton.addEventListener('click', doEntrySearch);
