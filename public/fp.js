@@ -157,13 +157,20 @@ function insertNewEntry() {
    * Only generate the new entry if the user supplied values for the entry
    * amount, entry name and entry description.
    */
-  if (entryAmount && entryName && entryDesc) {
+   if(entryAmount > total) {
+         var stringWarning = "You can only transfer at most $" + total + "!";
+         window.alert(stringWarning);
+  }else if(isNaN(entryAmount)){
+        window.alert("The entry amount should be a number!");
+  }else if(entryAmount && entryName && entryDesc) {
 
       var newEntryElem = generateNewEntryElem(entryAmount, entryName, entryDesc);
       var entryContainer = document.querySelector('.entry-container');
       entryContainer.insertAdjacentHTML('afterbegin', newEntryElem);
       allEntryElems.push(newEntryElem);
 
+      total -= entryAmount;
+      x[0].innerText=total;
       closecreateEntryModal();
 
   }
