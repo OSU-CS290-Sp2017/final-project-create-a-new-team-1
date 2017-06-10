@@ -96,7 +96,7 @@ function generateNewEntryElem(entryAmount, entryName, entryDesc) {
   var entryData = {
     amount: entryAmount,
     name: entryName,
-    desc: entryDescription
+    desc: entryDesc
   };
 
   return entryTemplate(entryData);
@@ -108,7 +108,7 @@ function generateNewEntryElem2(entryAmount, entryDesc) {
   var entryTemplate = Handlebars.templates.entry;
   var entryData = {
     amount: entryAmount,
-    desc: entryDescription
+    desc: entryDesc
   };
 
   return entryTemplate(entryData);

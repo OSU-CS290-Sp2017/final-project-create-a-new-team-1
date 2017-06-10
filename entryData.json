@@ -2,6 +2,6 @@
       {
       "amount": 500,
       "name":  "Name",
-      "description": "Description"
+      "desc": "Description"
       }
 ]
