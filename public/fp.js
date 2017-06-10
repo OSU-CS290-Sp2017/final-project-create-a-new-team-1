@@ -146,22 +146,12 @@ function insertNewEntry() {
 
       var newEntryElem = generateNewEntryElem(entryAmount, entryName, entryDesc);
       var entryContainer = document.querySelector('.entry-container');
-      entryContainer.insertAdjacentHTML('beforeend', newEntryElem);
-      allEntryElems.push(newEntryElem);
-
-      closecreateEntryModal();
-
-  } 
-  else if(entryAmount && !entryName && entryDesc) {
-
-  	var newEntryElem = generateNewEntryElem2(entryAmount, entryDesc);
-      var entryContainer = document.querySelector('.entry-container');
       entryContainer.insertAdjacentHTML('afterbegin', newEntryElem);
       allEntryElems.push(newEntryElem);
 
       closecreateEntryModal();
-  }
 
+  }
 
   else {
 
