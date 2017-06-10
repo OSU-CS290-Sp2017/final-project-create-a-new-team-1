@@ -82,10 +82,7 @@ function closecreateEntryModal2() {
 
 }
 
-<<<<<<< HEAD
   // This function clears any value present in any of the entry input elements
-
-=======
 function closecreateEntryModal3() {
 
   var modalBackdrop = document.getElementById('modal-backdrop');
@@ -102,7 +99,6 @@ function closecreateEntryModal3() {
 /*
  * This function clears any value present in any of the entry input elements.
  */
->>>>>>> 10d372a0263000e06a4af2aab6bee74c6bbe5866
 function clearEntryInputValues() {
 
   var entryInputElems = document.getElementsByClassName('entry-input-element');
