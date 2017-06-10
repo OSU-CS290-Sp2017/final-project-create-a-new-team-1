@@ -1,5 +1,20 @@
 var allEntryElems = [];
 
+//calculate total amount
+var entryAmounts = document.getElementsByClassName('entry-amount');
+var total = 0;
+for(var i = 0; i < entryAmounts.length; i++){
+      var text = entryAmounts[i].textContent;
+      var number = Number(text);
+      total += number;
+}
+
+x=document.getElementsByClassName("total-amount");  // Find the elements
+x[0].innerText=total;    // Change the content
+
+
+
+
 /*
  * This function shows the modal to create a entry when the "create entry"
  * button is clicked.
