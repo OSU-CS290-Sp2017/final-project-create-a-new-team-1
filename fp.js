@@ -103,6 +103,17 @@ function generateNewEntryElem(entryAmount, entryName, entryDesc) {
 
 }
 
+function generateNewEntryElem2(entryAmount, entryDesc) {
+
+  var entryTemplate = Handlebars.templates.entry;
+  var entryData = {
+    amount: entryAmount,
+    desc: entryDescription
+  };
+
+  return entryTemplate(entryData);
+
+}
 /*
  * This function takes user input values from the "create entry" modal,
  * generates a new entry using them, and inserts that entry into the document.
@@ -117,7 +128,7 @@ function insertNewEntry() {
    * Only generate the new entry if the user supplied values for both the entry
    * text and the entry attribution.  Give them an alert if they didn't.
    */
-  if ((entryAmount && entryName && entryDesc) || (entryAmount && entryDesc)) {
+  if (entryAmount && entryName && entryDesc) {
 
       var newEntryElem = generateNewEntryElem(entryAmount, entryName, entryDesc);
       var entryContainer = document.querySelector('.entry-container');
@@ -126,9 +137,21 @@ function insertNewEntry() {
 
       closecreateEntryModal();
 
-  } else {
+  } 
+  else if(entryAmount && entryDesc) {
 
-    alert('You must specify both the text and the author of the entry!');
+  	var newEntryElem = generateNewEntryElem2(entryAmount, entryDesc);
+      var entryContainer = document.querySelector('.entry-container');
+      entryContainer.insertAdjacentHTML('beforeend', newEntryElem);
+      allEntryElems.push(newEntryElem);
+
+      closecreateEntryModal();
+  }
+
+
+  else {
+
+    alert('Make sure all boxes are filled out!');
 
   }
 }
