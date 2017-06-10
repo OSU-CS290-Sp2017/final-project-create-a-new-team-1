@@ -10,6 +10,7 @@ for(var i = 0; i < entryAmounts.length; i++){
 }
 
 x=document.getElementsByClassName("total-amount");  // Find the elements
+total=parseFloat(Math.round(total * 100) / 100).toFixed(2);
 x[0].innerText=total;    // Change the content
 
 /*
@@ -166,7 +167,7 @@ function insertNewEntry() {
    * Only generate the new entry if the user supplied values for both the entry
    * text and the entry attribution.  Give them an alert if they didn't.
    */
-   if(entryAmount > total) {
+   if(total - entryAmount < 0) {
          var stringWarning = "You can only transfer at most $" + total + "!";
          window.alert(stringWarning);
   }else if(isNaN(entryAmount)){
@@ -179,6 +180,7 @@ function insertNewEntry() {
       allEntryElems.push(newEntryElem);
 
       total -= entryAmount;
+      total=parseFloat(Math.round(total * 100) / 100).toFixed(2);
       x[0].innerText=total;
       closecreateEntryModal();
 
