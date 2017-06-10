@@ -291,6 +291,9 @@ window.addEventListener('DOMContentLoaded', function () {
   var modalAcceptButton = document.querySelector('#create-entry-modal2 .modal-accept-button');
   modalAcceptButton.addEventListener('click', insertNewEntry2);
 
+  var modalAcceptButton3 = document.querySelector('#create-entry-modal3 .modal-accept-button');
+  modalAcceptButton3.addEventListener('click', insertNewEntry2);
+
   var searchButton = document.getElementById('navbar-search-button');
   searchButton.addEventListener('click', doEntrySearch);
 
