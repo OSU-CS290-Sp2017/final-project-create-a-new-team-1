@@ -1,7 +1,8 @@
 body {
-  font-family: lato, Helvetica, sans-serif;
+  font-family: Lato, Helvetica, sans-serif;
   margin: 0;
-  background-color: #eee;
+  background-color: #dadada;
+  background-image: url("https://www.transparenttextures.com/patterns/diagmonds.png");
 }
 
 a {
@@ -130,6 +131,34 @@ a:focus {
   flex-wrap: wrap;
 }
 
+.total-container{
+      padding: 5px;
+      display: flex;
+      position: fixed;
+      right: 10px;
+      top: 100px;
+      width: 120px;
+      background-color: #ffffff;
+      border-style:groove;
+      border-color: #dadada;
+}
+
+.total-content{
+      flex: 1 1 80%;
+      margin-left: 10px;
+
+}
+
+.total-have{
+      text-align: center;
+}
+
+.total-amount{
+      font-weight: bold;
+      color: #57b50c;
+      text-align: center;
+}
+
 .entry {
   flex: 0 1 80%;
   display: flex;
@@ -141,7 +170,14 @@ a:focus {
 }
 
 .entry-icon {
+  vertical-align: 
   font-size: 24px;
+  color: #57b50c;
+}
+
+.entry-icon2 {
+  font-size: 30px;
+  color: #57b50c;
 }
 
 .entry-content {
@@ -153,12 +189,12 @@ a:focus {
   margin: 0;
 }
 
-.entry-content .entry-attribution {
+/*.entry-content .entry-name {
   margin-top: 8px;
   text-align: right;
   font-weight: bold;
 }
-
+*/
 #create-entry-button1 {
   position: fixed;
   right: 30px;
@@ -263,6 +299,26 @@ a:focus {
   overflow: scroll;
 }
 
+#create-entry-modal2 {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1010;
+  overflow: scroll;
+}
+
+#create-entry-modal3 {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1010;
+  overflow: scroll;
+}
+
 .hidden {
   display: none;
 }
@@ -313,6 +369,7 @@ a:focus {
   font-weight: 600;
   flex: 1 75px;
   margin-right: 10px;
+  text-align: center;
 }
 
 .entry-input-element input,
@@ -399,12 +456,21 @@ footer nav ul li a{
 }
 
 .modal-footer .modal-accept-button {
-  background-color: #57b50c;
-  color: #fff;
+  background-color: #28e604;
+  color: #333;
+}
+
+.modal-footer .modal-accept-button2 {
+  background-color: #00c561;
+  color: #333;
 }
 
 .modal-footer .modal-accept-button:hover {
-  background-color: #087dde;
+  background-color: #eee;
+}
+
+.modal-footer .modal-accept-button2:hover {
+  background-color: #eee;
 }
 
 .error-container {

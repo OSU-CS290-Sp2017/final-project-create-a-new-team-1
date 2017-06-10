@@ -1,0 +1,18 @@
+<article class="entry">
+  <div class="entry-icon">
+    <i class="fa fa-money"></i>
+  </div>
+  <div class="entry-content">
+    <p class="entry-amount">
+      Amount: $<span class = "entry-amount-number">{{amount}}</span>
+    </p>
+    {{#if name}}
+      <p class="entry-name">
+        Recipient: {{name}}
+      </p>
+    {{/if}}
+    <p class="entry-description">
+       Description: {{desc}}
+    </p>
+  </div>
+</article>

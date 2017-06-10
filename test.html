@@ -7,17 +7,17 @@
 
     <link href="https://fonts.googleapis.com/css?family=Lato:100,400,700" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" media="screen">
-    <link rel="stylesheet" href="style.css" media="screen">
+    <link rel="stylesheet" href="./public/style.css" media="screen">
   </head>
-  
+
   <body>
     <header>
       <a href="#"><h1 class="site-title"><i class="fa fa-money"></i> Cash4U</h1></a>
       <nav class="navbar">
         <ul class="navlist">
-          <li class="navitem navlink active"><a href="#">Home</a></li>
-          <li class="navitem navlink"><a href="#">Help</a></li>
-          <li class="navitem navlink"><a href="#">About</a></li>
+          <li class="navitem navlink active"><a href="test.html">Home</a></li>
+          <li class="navitem navlink"><a href="./public/help.html">Help</a></li>
+          <li class="navitem navlink"><a href="./public/about.html">About</a></li>
           <li class="navitem navbar-search">
             <input type="text" id="navbar-search-input" placeholder="Search...">
             <button type="button" id="navbar-search-button"><i class="fa fa-search"></i></button>
@@ -34,7 +34,7 @@
         </div>
         <div class="entry-content">
           <p class="entry-amount">
-            Sitting in web dev... This class is so awesome!
+            5
           </p>
           <p class="entry-name">
             <a href="#">CSMajor2017</a>
@@ -48,7 +48,7 @@
         </div>
         <div class="entry-content">
           <p class="entry-amount">
-            Anyone watch the baseball game last night?  The Beavs are still in 1st place!
+            6
           </p>
           <p class="entry-name">
             <a href="#">BeaverBeliever</a>
@@ -62,9 +62,9 @@
         </div>
         <div class="entry-content">
           <p class="entry-amount">
-            A body in motion must remain in motion unless acted upon by an outside force.
+            7
           </p>
-          <p class="entry-amount">
+          <p class="entry-name">
             <a href="#">NewtonRulez</a>
           </p>
         </div>
@@ -76,7 +76,7 @@
         </div>
         <div class="entry-content">
           <p class="entry-amount">
-            Huh?
+            8
           </p>
           <p class="entry-name">
             <a href="#">ConfusedTweeterer</a>
@@ -90,7 +90,7 @@
         </div>
         <div class="entry-content">
           <p class="entry-amount">
-            Why did the calf cross the road?
+            1
           </p>
           <p class="entry-name">
             <a href="#">Setup</a>
@@ -104,7 +104,7 @@
         </div>
         <div class="entry-content">
           <p class="entry-amount">
-            To get to the udder side!
+            1
           </p>
           <p class="entry-name">
             <a href="#">Punchline</a>
@@ -118,7 +118,7 @@
         </div>
         <div class="entry-content">
           <p class="entry-amount">
-            Any questions about flexboxes?
+            1
           </p>
           <p class="entry-name">
             <a href="#">Hess</a>
@@ -132,7 +132,7 @@
         </div>
         <div class="entry-content">
           <p class="entry-amount">
-            Friendly reminder: your taxes were due yesterday.
+            -1
           </p>
           <p class="entry-name">
             <a href="#">TheIRS</a>
@@ -140,6 +140,19 @@
         </div>
       </article>
 
+    </main>
+    <main class="total-container">
+          <div class="entry-icon2">
+            <i class="fa fa-money"></i>
+          </div>
+          <div class="entry-content">
+            <p class="total-have">
+              You have:
+            </p>
+            <p class="total-amount">
+              0
+            </p>
+          </div>
     </main>
 
     <button type="button" id="create-entry-button1"><i class="fa fa-paper-plane"></i></button>
@@ -155,7 +168,7 @@
 
         <div class="modal-body">
           <div class="entry-input-element">
-            <label for="entry-amount-input">Amount to send: $</label>
+            <label for="entry-amount-input">Amount to send:</label>
             <textarea id="entry-amount-input"></textarea>
           </div>
           <div class="entry-input-element">
@@ -179,7 +192,7 @@
         <button type="button" id="create-entry-button2"><i class="fa fa-plus"></i></button>
 
     <div id="modal-backdrop" class="hidden"></div>
-    <div id="create-entry-modal" class="hidden">
+    <div id="create-entry-modal2" class="hidden">
       <div class="modal-dialog">
 
         <div class="modal-header">
@@ -189,7 +202,7 @@
 
         <div class="modal-body">
           <div class="entry-input-element">
-            <label for="entry-amount-input">Amount to deposit: $</label>
+            <label for="entry-amount-input">Amount to deposit:</label>
             <textarea id="entry-amount-input"></textarea>
           </div>
           <div class="entry-input-element">
@@ -205,11 +218,11 @@
 
       </div>
     </div>
-    
+
         <button type="button" id="create-entry-button3"><i class="fa fa-minus"></i></button>
 
     <div id="modal-backdrop" class="hidden"></div>
-    <div id="create-entry-modal" class="hidden">
+    <div id="create-entry-modal2" class="hidden">
       <div class="modal-dialog">
 
         <div class="modal-header">
@@ -219,7 +232,7 @@
 
         <div class="modal-body">
           <div class="entry-input-element">
-            <label for="entry-amount-input">Amount to withdraw: $</label>
+            <label for="entry-amount-input">Amount to withdraw:</label>
             <textarea id="entry-amount-input"></textarea>
           </div>
           <div class="entry-input-element">
@@ -235,7 +248,7 @@
 
       </div>
     </div>
-    
+
   </body>
 
   <script src="fp.js" charset="utf-8"></script>

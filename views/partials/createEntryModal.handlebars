@@ -1,24 +1,28 @@
-<button type = "button" id = "create-entry-button"><i class = "fa fa-money"></i></button>
+<button type = "button" id = "create-entry-button1"><i class = "fa fa-paper-plane"></i></button>
 <div id = "modal-backdrop" class = "hidden"></div>
 <div id = "create-entry-modal" class = "hidden">
   <div class = "modal-dialog">
     <div class = "modal-header">
-      <h3>Create an Entry</h3>
+      <h3>Send funds</h3>
       <button type = "button" class = "modal-close-button">&times;</button>
      </div>
      <div class = "modal-body">
       <div class = "entry-input-element">
-       <label for = "entry-amount-input">Entry amount</label>
-       <textarea id = "entry-amount-input"></textarea>
+       <label for = "entry-amount-input">Amount to send:</label>
+       <input type="text" id = "entry-amount-input">
       </div>
       <div class = "entry-input-element">
-        <label for = "entry-name-input">Name</label>
+        <label for = "entry-name-input">Name of recipient:</label>
         <input type = "text" id = "entry-name-input">
+      </div>
+      <div class="entry-input-element">
+            <label for="entry-description-input">Description:</label>
+            <textarea id = "entry-description-input"></textarea>
       </div>
      </div>
      <div class = "modal-footer">
       <button type = "button" class = "modal-cancel-button">Cancel</button>
-      <button type = "button" class = "modal-accept-button">Create Entry</button>
+      <button type = "button" class = "modal-accept-button2">Send</button>
      </div>
     </div>
    </div>
