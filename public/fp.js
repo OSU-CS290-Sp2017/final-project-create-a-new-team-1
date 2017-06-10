@@ -178,7 +178,6 @@ function insertNewEntry() {
 }
 function insertNewEntry2() {
 
-console.log("inside second new entry");
   var entryAmount = document.getElementById('entry-amount-input2').value;
   var entryDesc = document.getElementById('entry-description-input2').value;
   /*
