@@ -181,8 +181,32 @@ function insertNewEntry() {
 }
 function insertNewEntry2() {
 
-  var entryAmount = document.getElementById('entry-amount-input').value;
-  var entryDesc = document.getElementById('entry-description-input').value;
+  var entryAmount = document.getElementById('entry-amount-input2').value;
+  var entryDesc = document.getElementById('entry-description-input2').value;
+  /*
+   * Only generate the new entry if the user supplied values for both the entry
+   * amount and the entry description. Give an alert if they aren't filled out.
+   */
+  if(entryAmount && entryDesc) {
+
+    var newEntryElem = generateNewEntryElem2(entryAmount, entryDesc);
+      var entryContainer = document.querySelector('.entry-container');
+      entryContainer.insertAdjacentHTML('afterbegin', newEntryElem);
+      allEntryElems.push(newEntryElem);
+
+      closecreateEntryModal();
+  }
+
+  else {
+
+    alert('Make sure all boxes are filled out!');
+
+  }
+}
+function insertNewEntry3() {
+
+  var entryAmount = document.getElementById('entry-amount-input3').value;
+  var entryDesc = document.getElementById('entry-description-input3').value;
   /*
    * Only generate the new entry if the user supplied values for both the entry
    * amount and the entry description. Give an alert if they aren't filled out.
