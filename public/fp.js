@@ -184,13 +184,20 @@ function insertNewEntry2() {
    * Only generate the new entry if the user supplied values for both the entry
    * amount and the entry description. Give an alert if they aren't filled out.
    */
-  if(entryAmount && entryDesc) {
+   if(isNaN(entryAmount)){
+         window.alert("The entry amount should be a number!");
+   }else if(entryAmount && entryDesc) {
 
     var newEntryElem = generateNewEntryElem2(entryAmount, entryDesc);
       var entryContainer = document.querySelector('.entry-container');
       entryContainer.insertAdjacentHTML('afterbegin', newEntryElem);
       allEntryElems.push(newEntryElem);
-
+      typeof entryAmount === 'number';
+      console.log("New Entry Amount: ", entryAmount);
+      total = parseFloat(entryAmount) + parseFloat(total);
+      total = parseFloat(Math.round(total * 100) / 100).toFixed(2);
+      x[0].innerText = total;
+      console.log("Total: ", total);
       closecreateEntryModal2();
   }
 
