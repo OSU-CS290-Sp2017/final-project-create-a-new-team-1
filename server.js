@@ -6,7 +6,7 @@ var fs = require('fs');
 var app = express();
 var port = process.env.PORT || 3000;
 
-app.engine('handlebars', exphbs({defaultLayout: 'main'}));
+app.engine('handlebars', exphbs({defaultLayout: 'fp'}));
 app.set('view engine', 'handlebars');
 
 app.get('/', function(req, res, next){
