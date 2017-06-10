@@ -193,9 +193,9 @@ function insertNewEntry() {
   }
 }
 function insertNewEntry2() {
-
-  var entryAmount = document.getElementById('entry-amount-input').value;
-  var entryDesc = document.getElementById('entry-description-input').value;
+console.log("inside second new entry");
+  var entryAmount = document.getElementById('entry-amount-input2').value;
+  var entryDesc = document.getElementById('entry-description-input2').value;
   console.log(entryAmount)
   console.log(entryDesc)
   /*
@@ -209,7 +209,7 @@ function insertNewEntry2() {
       entryContainer.insertAdjacentHTML('afterbegin', newEntryElem);
       allEntryElems.push(newEntryElem);
 
-      closecreateEntryModal();
+      closecreateEntryModal2();
   }
 
   else {
