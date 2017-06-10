@@ -82,10 +82,7 @@ function closecreateEntryModal2() {
 
 }
 
-<<<<<<< HEAD
   // This function clears any value present in any of the entry input elements
-
-=======
 function closecreateEntryModal3() {
 
   var modalBackdrop = document.getElementById('modal-backdrop');
@@ -102,7 +99,6 @@ function closecreateEntryModal3() {
 /*
  * This function clears any value present in any of the entry input elements.
  */
->>>>>>> 10d372a0263000e06a4af2aab6bee74c6bbe5866
 function clearEntryInputValues() {
 
   var entryInputElems = document.getElementsByClassName('entry-input-element');
@@ -151,9 +147,9 @@ function insertNewEntry() {
   var entryAmount = document.getElementById('entry-amount-input').value;
   var entryName = document.getElementById('entry-name-input').value;
   var entryDesc = document.getElementById('entry-description-input').value;
-  console.log(entryAmount)
-  console.log(entryName)
-  console.log(entryDesc)
+  console.log(entryAmount);
+  console.log(entryName);
+  console.log(entryDesc);
   /*
    * Only generate the new entry if the user supplied values for the entry
    * amount, entry name and entry description.
@@ -185,10 +181,12 @@ function insertNewEntry() {
 }
 function insertNewEntry2() {
 
+  console.log(document.getElementById('entry-amount-input').value);
+  console.log(document.getElementById('entry-description-input').value);
   var entryAmount = document.getElementById('entry-amount-input').value;
   var entryDesc = document.getElementById('entry-description-input').value;
-  console.log(entryAmount)
-  console.log(entryDesc)
+  console.log(entryAmount);
+  console.log(entryDesc);
   /*
    * Only generate the new entry if the user supplied values for both the entry
    * amount and the entry description. Give an alert if they aren't filled out.
