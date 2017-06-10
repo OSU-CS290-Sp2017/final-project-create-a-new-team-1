@@ -138,6 +138,9 @@ function insertNewEntry() {
   var entryAmount = document.getElementById('entry-amount-input').value;
   var entryName = document.getElementById('entry-name-input').value;
   var entryDesc = document.getElementById('entry-description-input').value;
+  console.log(entryAmount)
+  console.log(entryName)
+  console.log(entryDesc)
 
   /*
    * Only generate the new entry if the user supplied values for both the entry
@@ -160,7 +163,7 @@ function insertNewEntry() {
       entryContainer.insertAdjacentHTML('beforeend', newEntryElem);
       allEntryElems.push(newEntryElem);
 
-      closecreateEntryModal();
+      closecreateEntryModal2();
   }
 
 
@@ -214,6 +217,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
   var createEntryButton1 = document.getElementById('create-entry-button1');
   createEntryButton1.addEventListener('click', showcreateEntryModal);
+
 
   var createEntryButton2 = document.getElementById('create-entry-button2');
   createEntryButton2.addEventListener('click', showcreateEntryModal2);
