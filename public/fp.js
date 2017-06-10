@@ -169,6 +169,32 @@ function insertNewEntry() {
 
   }
 }
+function insertNewEntry2() {
+
+  var entryAmount = document.getElementById('entry-amount-input').value;
+  var entryDesc = document.getElementById('entry-description-input').value;
+  console.log(entryAmount)
+  console.log(entryDesc)
+  /*
+   * Only generate the new entry if the user supplied values for both the entry
+   * text and the entry attribution.  Give them an alert if they didn't.
+   */
+  if(entryAmount && entryDesc) {
+
+    var newEntryElem = generateNewEntryElem2(entryAmount, entryDesc);
+      var entryContainer = document.querySelector('.entry-container');
+      entryContainer.insertAdjacentHTML('beforeend', newEntryElem);
+      allEntryElems.push(newEntryElem);
+
+      closecreateEntryModal();
+  }
+
+  else {
+
+    alert('Make sure all boxes are filled out!');
+
+  }
+}
 
 /*
  * Perform a search over over all the entrys based on the search query the user
@@ -236,7 +262,7 @@ window.addEventListener('DOMContentLoaded', function () {
   modalAcceptButton2.addEventListener('click', insertNewEntry);
 
   var modalAcceptButton = document.querySelector('#create-entry-modal2 .modal-accept-button');
-  modalAcceptButton.addEventListener('click', insertNewEntry);
+  modalAcceptButton.addEventListener('click', insertNewEntry2);
 
   var searchButton = document.getElementById('navbar-search-button');
   searchButton.addEventListener('click', doEntrySearch);
