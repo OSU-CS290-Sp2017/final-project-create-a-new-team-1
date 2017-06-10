@@ -181,12 +181,8 @@ function insertNewEntry() {
 }
 function insertNewEntry2() {
 
-  console.log(document.getElementById('entry-amount-input').value);
-  console.log(document.getElementById('entry-description-input').value);
   var entryAmount = document.getElementById('entry-amount-input').value;
   var entryDesc = document.getElementById('entry-description-input').value;
-  console.log(entryAmount);
-  console.log(entryDesc);
   /*
    * Only generate the new entry if the user supplied values for both the entry
    * amount and the entry description. Give an alert if they aren't filled out.
