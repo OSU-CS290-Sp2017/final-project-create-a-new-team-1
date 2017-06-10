@@ -137,6 +137,7 @@ a:focus {
 }
 
 .entry-icon {
+  vertical-align: 
   font-size: 24px;
   color: #57b50c;
 }
@@ -155,12 +156,12 @@ a:focus {
   margin: 0;
 }
 
-.entry-content .entry-name {
+/*.entry-content .entry-name {
   margin-top: 8px;
   text-align: right;
   font-weight: bold;
 }
-
+*/
 #create-entry-button1 {
   position: fixed;
   right: 30px;
