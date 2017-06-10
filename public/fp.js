@@ -156,7 +156,7 @@ function insertNewEntry() {
 
   	var newEntryElem = generateNewEntryElem2(entryAmount, entryDesc);
       var entryContainer = document.querySelector('.entry-container');
-      entryContainer.insertAdjacentHTML('beforeend', newEntryElem);
+      entryContainer.insertAdjacentHTML('afterbegin', newEntryElem);
       allEntryElems.push(newEntryElem);
 
       closecreateEntryModal();
@@ -183,7 +183,7 @@ function insertNewEntry2() {
 
     var newEntryElem = generateNewEntryElem2(entryAmount, entryDesc);
       var entryContainer = document.querySelector('.entry-container');
-      entryContainer.insertAdjacentHTML('beforeend', newEntryElem);
+      entryContainer.insertAdjacentHTML('afterbegin', newEntryElem);
       allEntryElems.push(newEntryElem);
 
       closecreateEntryModal();
