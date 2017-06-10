@@ -159,9 +159,9 @@ function insertNewEntry() {
   var entryAmount = document.getElementById('entry-amount-input').value;
   var entryName = document.getElementById('entry-name-input').value;
   var entryDesc = document.getElementById('entry-description-input').value;
-  console.log(entryAmount)
-  console.log(entryName)
-  console.log(entryDesc)
+  console.log(entryAmount);
+  console.log(entryName);
+  console.log(entryDesc);
   /*
    * Only generate the new entry if the user supplied values for both the entry
    * text and the entry attribution.  Give them an alert if they didn't.
@@ -192,10 +192,12 @@ function insertNewEntry() {
 }
 function insertNewEntry2() {
 
+  console.log(document.getElementById('entry-amount-input').value);
+  console.log(document.getElementById('entry-description-input').value);
   var entryAmount = document.getElementById('entry-amount-input').value;
   var entryDesc = document.getElementById('entry-description-input').value;
-  console.log(entryAmount)
-  console.log(entryDesc)
+  console.log(entryAmount);
+  console.log(entryDesc);
   /*
    * Only generate the new entry if the user supplied values for both the entry
    * text and the entry attribution.  Give them an alert if they didn't.
