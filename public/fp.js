@@ -152,7 +152,7 @@ function insertNewEntry() {
       closecreateEntryModal();
 
   } 
-  else if(entryAmount && entryDesc) {
+  else if(entryAmount && !entryName && entryDesc) {
 
   	var newEntryElem = generateNewEntryElem2(entryAmount, entryDesc);
       var entryContainer = document.querySelector('.entry-container');
