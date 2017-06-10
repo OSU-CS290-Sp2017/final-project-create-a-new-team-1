@@ -25,6 +25,18 @@ app.get('/', function(req, res, next){
 
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.get('/help', function (req, res) {
+  	res.status(200).render('help');
+});
+app.get('/about', function (req, res) {
+  	res.status(200).render('about');
+});
+app.get('/contact', function (req, res) {
+  	res.status(200).render('contact');
+});
+app.get('/report', function (req, res) {
+  	res.status(200).render('report');
+});
 app.get('*', function (req, res) {
   	res.status(404).render('404');
 });
