@@ -1,7 +1,7 @@
 var allEntryElems = [];
 
 //calculate total amount
-var entryAmounts = document.getElementsByClassName('entry-amount');
+var entryAmounts = document.getElementsByClassName('entry-amount-number');
 var total = 0;
 for(var i = 0; i < entryAmounts.length; i++){
       var text = entryAmounts[i].textContent;
