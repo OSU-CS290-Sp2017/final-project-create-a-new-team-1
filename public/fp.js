@@ -38,6 +38,23 @@ function showcreateEntryModal2() {
 
 }
   // Function will hide the modal and clears values inside the input fields when closed
+
+function showcreateEntryModal3() {
+
+  var modalBackdrop = document.getElementById('modal-backdrop');
+  var createEntryModal3 = document.getElementById('create-entry-modal3');
+
+  // Show the modal and its backdrop.
+  modalBackdrop.classList.remove('hidden');
+  createEntryModal3.classList.remove('hidden');
+
+}
+
+/*
+ * This function hides the modal to create a entry and clears any existing
+ * values from the input fields whenever any of the modal close actions are
+ * taken.
+ */
 function closecreateEntryModal() {
 
   var modalBackdrop = document.getElementById('modal-backdrop');
@@ -64,8 +81,27 @@ function closecreateEntryModal2() {
 
 }
 
+<<<<<<< HEAD
   // This function clears any value present in any of the entry input elements
 
+=======
+function closecreateEntryModal3() {
+
+  var modalBackdrop = document.getElementById('modal-backdrop');
+  var createEntryModal3 = document.getElementById('create-entry-modal3');
+
+  // Hide the modal and its backdrop.
+  modalBackdrop.classList.add('hidden');
+  createEntryModal3.classList.add('hidden');
+
+  clearEntryInputValues();
+
+}
+
+/*
+ * This function clears any value present in any of the entry input elements.
+ */
+>>>>>>> 10d372a0263000e06a4af2aab6bee74c6bbe5866
 function clearEntryInputValues() {
 
   var entryInputElems = document.getElementsByClassName('entry-input-element');
@@ -213,7 +249,7 @@ window.addEventListener('DOMContentLoaded', function () {
   createEntryButton2.addEventListener('click', showcreateEntryModal2);
 
   var createEntryButton3 = document.getElementById('create-entry-button3');
-  createEntryButton3.addEventListener('click', showcreateEntryModal2);
+  createEntryButton3.addEventListener('click', showcreateEntryModal3);
 
   var modalCloseButton = document.querySelector('#create-entry-modal .modal-close-button');
   modalCloseButton.addEventListener('click', closecreateEntryModal);
@@ -227,11 +263,20 @@ window.addEventListener('DOMContentLoaded', function () {
   var modalCancalButton2 = document.querySelector('#create-entry-modal2 .modal-cancel-button');
   modalCancalButton2.addEventListener('click', closecreateEntryModal2);
 
+  var modalCloseButton3 = document.querySelector('#create-entry-modal3 .modal-close-button');
+  modalCloseButton3.addEventListener('click', closecreateEntryModal3);
+
+  var modalCancalButton3 = document.querySelector('#create-entry-modal3 .modal-cancel-button');
+  modalCancalButton3.addEventListener('click', closecreateEntryModal3);
+
   var modalAcceptButton2 = document.querySelector('#create-entry-modal .modal-accept-button2');
   modalAcceptButton2.addEventListener('click', insertNewEntry);
 
   var modalAcceptButton = document.querySelector('#create-entry-modal2 .modal-accept-button');
   modalAcceptButton.addEventListener('click', insertNewEntry2);
+
+  var modalAcceptButton3 = document.querySelector('#create-entry-modal3 .modal-accept-button');
+  modalAcceptButton3.addEventListener('click', insertNewEntry2);
 
   var searchButton = document.getElementById('navbar-search-button');
   searchButton.addEventListener('click', doEntrySearch);
