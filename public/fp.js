@@ -1,5 +1,11 @@
 var allEntryElems = [];
 
+Handlebars.registerHelper("strong", function(object) {
+  text = Handlebars.escapeExpression(object.text);
+
+  return new Handlebars.SafeString("<strong>" + text + "</strong>");
+});
+
 //calculate total amount
 var entryAmounts = document.getElementsByClassName('entry-amount-number');
 var entrySign = document.getElementsByClassName('entry-sign')
@@ -129,8 +135,8 @@ function generateNewEntryElem(entryAmount, entryName, entryDesc, entrySign) {
     amount: entryAmount,
     name: entryName,
     desc: entryDesc,
-    sign: entrySign
-  };
+    sign: entrySign,
+};
 
   return entryTemplate(entryData);
 

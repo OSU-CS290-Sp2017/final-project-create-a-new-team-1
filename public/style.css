@@ -152,8 +152,11 @@ img {
       position: absolute;
       right: 10px;
       top: 110px;
-      width: 120px;
+      max-width: 200px;
+      border: 3px;
+      border-radius: 15px;
       background-color: #ffffff;
+      background-image: url(https://www.transparenttextures.com/patterns/diamond-upholstery.png);
       border-style: outset;
       border-color: #43840b;
 }
@@ -161,7 +164,6 @@ img {
 .total-content{
       flex: 1 1 80%;
       margin-left: 10px;
-
 }
 
 .total-have{
@@ -179,8 +181,9 @@ img {
   display: flex;
   margin: 15px;
   padding: 10px;
-  border-radius: 2px;
-  background-color: #fff;
+  border-radius: 25px;
+  border: 3px;
+  background-color: #ffffff;
   border-style: outset;
   border-color: #43840b;
   background-image: url(https://www.transparenttextures.com/patterns/diamond-upholstery.png);
@@ -196,16 +199,26 @@ img {
 .entry-icon2 {
   font-size: 30px;
   color: #43840b;
+  margin-left: 5px;
 }
 
 .entry-content {
   flex: 1 1 80%;
   margin-left: 30px;
+  word-break: break-all;
+  white-space: normal;
 }
 
 .entry-content2 {
   flex: 1 1 80%;
   margin-left: 10px;
+  margin-right: 5px;
+  word-break: break-all;
+  white-space: normal;
+}
+
+.bold{
+  font-weight: bold;
 }
 
 .entry-content p {

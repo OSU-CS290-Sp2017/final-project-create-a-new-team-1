@@ -15,7 +15,7 @@ app.get('/', function(req, res, next){
 		var templateArgs = {
 			entries: entry,
 			show: true
-		}
+		};
 		res.render('entryPage', templateArgs);
 	}
 	else{
