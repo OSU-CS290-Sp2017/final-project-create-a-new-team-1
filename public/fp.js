@@ -121,25 +121,27 @@ function clearEntryInputValues() {
  * the two or three necessary arguments
  */
 
-function generateNewEntryElem(entryAmount, entryName, entryDesc) {
+function generateNewEntryElem(entryAmount, entryName, entryDesc, entrySign) {
 
   var entryTemplate = Handlebars.templates.entry;
   var entryData = {
     amount: entryAmount,
     name: entryName,
-    desc: entryDesc
+    desc: entryDesc,
+    sign: entrySign
   };
 
   return entryTemplate(entryData);
 
 }
 
-function generateNewEntryElem2(entryAmount, entryDesc) {
+function generateNewEntryElem2(entryAmount, entryDesc, entrySign) {
 
   var entryTemplate = Handlebars.templates.entry;
   var entryData = {
     amount: entryAmount,
-    desc: entryDesc
+    desc: entryDesc,
+    sign: entrySign
   };
 
   return entryTemplate(entryData);
@@ -165,7 +167,7 @@ function insertNewEntry() {
         window.alert("The entry amount should be a number!");
   }else if(entryAmount && entryName && entryDesc) {
 
-      var newEntryElem = generateNewEntryElem(entryAmount, entryName, entryDesc);
+      var newEntryElem = generateNewEntryElem(entryAmount, entryName, entryDesc, "-");
       var entryContainer = document.querySelector('.entry-container');
       entryContainer.insertAdjacentHTML('afterbegin', newEntryElem);
       allEntryElems.push(newEntryElem);
@@ -195,7 +197,7 @@ function insertNewEntry2() {
          window.alert("The entry amount should be a number!");
    }else if(entryAmount && entryDesc) {
 
-    var newEntryElem = generateNewEntryElem2(entryAmount, entryDesc);
+    var newEntryElem = generateNewEntryElem2(entryAmount, entryDesc, "+");
       var entryContainer = document.querySelector('.entry-container');
       entryContainer.insertAdjacentHTML('afterbegin', newEntryElem);
       allEntryElems.push(newEntryElem);
@@ -229,7 +231,7 @@ function insertNewEntry3() {
       window.alert("The entry amount should be a number!");
 }else if(entryAmount && entryDesc) {
 
-    var newEntryElem = generateNewEntryElem2(entryAmount, entryDesc);
+    var newEntryElem = generateNewEntryElem2(entryAmount, entryDesc, "-");
       var entryContainer = document.querySelector('.entry-container');
       entryContainer.insertAdjacentHTML('afterbegin', newEntryElem);
       allEntryElems.push(newEntryElem);
