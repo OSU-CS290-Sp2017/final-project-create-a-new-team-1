@@ -8,8 +8,9 @@ for(var i = 0; i < entryAmounts.length; i++){
       var text = entryAmounts[i].textContent;
       var number = Number(text);
       console.log(entrySign[i]);
-      if(entrySign[i].textContent == '+'){
+      if(entrySign[i].textContent == "+"){
             total += number;
+
       }else{
             total -= number;
       }
@@ -253,6 +254,7 @@ function insertNewEntry3() {
  * entered in the navbar.  Only display entries that match the search query.
  * Display all entries if the search query is empty.
  */
+ /*
 function doEntrySearch() {
       console.log("In do entry search");
   // Grab the search query, make sure it's not null, and do some preprocessing.
@@ -268,7 +270,7 @@ function doEntrySearch() {
   /*
    * Loop through the collection of all entries and add entries back into the DOM
    * if they contain the search term or if the search term is empty.
-   */
+   *//*
   allEntryElems.forEach(function (entryElem) {
     if (!searchQuery || entryElem.textContent.toLowerCase().indexOf(searchQuery) !== -1) {
       entryContainer.appendChild(entryElem);
@@ -326,14 +328,44 @@ window.addEventListener('DOMContentLoaded', function () {
   modalAcceptButton3.addEventListener('click', insertNewEntry3);
 
   var searchButton = document.getElementById('navbar-search-button');
-  searchButton.addEventListener('click', doEntrySearch);
+  //searchButton.addEventListener('click', doEntrySearch);
 
   var searchInput = document.getElementById('navbar-search-input');
-  searchInput.addEventListener('input', doEntrySearch);
+  //searchInput.addEventListener('input', doEntrySearch);
 
 });
+
 var searchButton = document.getElementById('navbar-search-button');
-searchButton.addEventListener('click', doEntrySearch);
+//searchButton.addEventListener('click', doEntrySearch);
 
 var searchInput = document.getElementById('navbar-search-input');
-searchInput.addEventListener('input', doEntrySearch);
+//searchInput.addEventListener('input', doEntrySearch);
+
+
+function handleSearch(event){
+      console.log("In handlesearch");
+      var entries = document.getElementsByClassName('entry');
+      console.log("Entries", entries);
+      var searchTerm = document.getElementById('navbar-search-input').value;
+      var entryAmount = document.getElementsByClassName("entry-amount-number");
+      var entryDescription = document.getElementsByClassName('entry-description');
+      var name = document.getElementsByClassName('entry-name');
+
+      for(var i = 0; i < entries.length; i++){
+            console.log(searchTerm);
+            console.log(entryAmount);
+            console.log(entryDescription);
+            console.log(name);
+            if(entries[i].textContent.toLowerCase().indexOf(searchTerm.toLowerCase()) === -1 &&
+             
+              entryDescription[i].textContent.toLowerCase().indexOf(searchTerm.toLowerCase()) === -1){
+                  entries[i].classList.add('hidden');
+            }else{
+                  entries[i].classList.remove('hidden');
+            }
+      }
+
+}
+
+searchInput.addEventListener('input', handleSearch);
+searchButton.addEventListener('click', handleSearch);
