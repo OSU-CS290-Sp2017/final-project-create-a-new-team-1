@@ -1,1 +1,286 @@
+<!DOCTYPE html>
+<html>
+  <head>
 
+    <meta charset="utf-8">
+    <title>Cash4U</title>
+
+    <!-- This is a stylesheet that includes the font you should use -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,400,700" rel="stylesheet">
+
+
+
+    <!-- This is a 3rd-party stylesheet for Font Awesome: http://fontawesome.io/ -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" media="screen">
+    <link href='style_media_query_reporter.css' type='text/css' rel='stylesheet'/>
+    
+    <link rel="stylesheet" href="style.css" media="screen">
+
+  </head>
+
+  <body>
+
+    <header>
+      <!-- The <i> tag below includes the bullhorn icon from Font Awesome -->
+      <a href="#"><h1 class="site-title"><i class="fa fa-money"></i> Cash4U</h1></a>
+
+      <nav class="navbar">
+        <ul class="navlist">
+          <li class="navitem navlink active"><a href="#">Home</a></li>
+          <li class="navitem navlink"><a href="#">Help</a></li>
+          <li class="navitem navlink"><a href="#">About</a></li>
+          <li class="navitem navbar-search">
+            <input type="text" id="navbar-search-input" placeholder="Search...">
+            <button type="button" id="navbar-search-button"><i class="fa fa-search"></i></button>
+          </li>
+        </ul>
+      </nav>
+      <h1 class="logs"></h1>
+      <h1 class="logs-header">logs</h1>
+    </header>
+
+    <main class="entry-container">
+
+      <article class="entry">
+        <div class="entry-icon">
+          <i class="fa fa-money"></i>
+        </div>
+        <div class="entry-content">
+          <p class="entry-amount">
+            Sitting in web dev... This class is so awesome!
+          </p>
+          <p class="entry-name">
+            <a href="#">CSMajor2017</a>
+          </p>
+        </div>
+      </article>
+
+      <article class="entry">
+        <div class="entry-icon">
+          <i class="fa fa-money"></i>
+        </div>
+        <div class="entry-content">
+          <p class="entry-amount">
+            Anyone watch the baseball game last night?  The Beavs are still in 1st place!
+          </p>
+          <p class="entry-name">
+            <a href="#">BeaverBeliever</a>
+          </p>
+        </div>
+      </article>
+
+      <article class="entry">
+        <div class="entry-icon">
+          <i class="fa fa-money"></i>
+        </div>
+        <div class="entry-content">
+          <p class="entry-amount">
+            A body in motion must remain in motion unless acted upon by an outside force.
+          </p>
+          <p class="entry-amount">
+            <a href="#">NewtonRulez</a>
+          </p>
+        </div>
+      </article>
+
+      <article class="entry">
+        <div class="entry-icon">
+          <i class="fa fa-money"></i>
+        </div>
+        <div class="entry-content">
+          <p class="entry-amount">
+            Huh?
+          </p>
+          <p class="entry-name">
+            <a href="#">ConfusedTweeterer</a>
+          </p>
+        </div>
+      </article>
+
+      <article class="entry">
+        <div class="entry-icon">
+          <i class="fa fa-money"></i>
+        </div>
+        <div class="entry-content">
+          <p class="entry-amount">
+            Why did the calf cross the road?
+          </p>
+          <p class="entry-name">
+            <a href="#">Setup</a>
+          </p>
+        </div>
+      </article>
+
+      <article class="entry">
+        <div class="entry-icon">
+          <i class="fa fa-money"></i>
+        </div>
+        <div class="entry-content">
+          <p class="entry-amount">
+            To get to the udder side!
+          </p>
+          <p class="entry-name">
+            <a href="#">Punchline</a>
+          </p>
+        </div>
+      </article>
+
+      <article class="entry">
+        <div class="entry-icon">
+          <i class="fa fa-money"></i>
+        </div>
+        <div class="entry-content">
+          <p class="entry-amount">
+            Any questions about flexboxes?
+          </p>
+          <p class="entry-name">
+            <a href="#">Hess</a>
+          </p>
+        </div>
+      </article>
+
+      <article class="entry">
+        <div class="entry-icon">
+          <i class="fa fa-money"></i>
+        </div>
+        <div class="entry-content">
+          <p class="entry-amount">
+            Friendly reminder: your taxes were due yesterday.
+          </p>
+          <p class="entry-name">
+            <a href="#">TheIRS</a>
+          </p>
+        </div>
+      </article>
+
+    </main>
+
+    <button type="button" id="create-entry-button1"><i class="fa fa-paper-plane"></i></button>
+
+    <div id="modal-backdrop" class="hidden"></div>
+    <div id="create-entry-modal" class="hidden">
+      <div class="modal-dialog">
+
+        <div class="modal-header">
+          <h3>Send funds</h3>
+          <button type="button" class="modal-close-button">&times;</button>
+        </div>
+
+        <div class="modal-body">
+          <div class="entry-input-element">
+            <label for="entry-amount-input">Amount to send: $</label>
+            <textarea id="entry-amount-input"></textarea>
+          </div>
+          <div class="entry-input-element">
+            <label for="entry-name-input">Name of recipient: </label>
+            <input type="text" id="entry-name-input">
+          </div>
+          <div class="entry-input-element">
+            <label for="entry-description-input">Description: </label>
+            <input type="text" id="entry-description-input">
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="modal-cancel-button">Cancel</button>
+          <button type="button" class="modal-accept-button2">Send funds</button>
+        </div>
+
+      </div>
+    </div>
+
+        <button type="button" id="create-entry-button2"><i class="fa fa-plus"></i></button>
+
+    <div id="modal-backdrop" class="hidden"></div>
+    <div id="create-entry-modal" class="hidden">
+      <div class="modal-dialog">
+
+        <div class="modal-header">
+          <h3>Deposit</h3>
+          <button type="button" class="modal-close-button">&times;</button>
+        </div>
+
+        <div class="modal-body">
+          <div class="entry-input-element">
+            <label for="entry-amount-input">Amount to deposit: $</label>
+            <textarea id="entry-amount-input"></textarea>
+          </div>
+          <div class="entry-input-element">
+            <label for="entry-description-input">Description: </label>
+            <input type="text" id="entry-description-input">
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="modal-cancel-button">Cancel</button>
+          <button type="button" class="modal-accept-button">Deposit</button>
+        </div>
+
+      </div>
+    </div>
+    
+        <button type="button" id="create-entry-button3"><i class="fa fa-minus"></i></button>
+
+    <div id="modal-backdrop" class="hidden"></div>
+    <div id="create-entry-modal" class="hidden">
+      <div class="modal-dialog">
+
+        <div class="modal-header">
+          <h3>Withdraw</h3>
+          <button type="button" class="modal-close-button">&times;</button>
+        </div>
+
+        <div class="modal-body">
+          <div class="entry-input-element">
+            <label for="entry-amount-input">Amount to withdraw: $</label>
+            <textarea id="entry-amount-input"></textarea>
+          </div>
+          <div class="entry-input-element">
+            <label for="entry-description-input">Description: </label>
+            <input type="text" id="entry-description-input">
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="modal-cancel-button">Cancel</button>
+          <button type="button" class="modal-accept-button">Withdraw</button>
+        </div>
+
+      </div>
+    </div>
+    
+    <footer class ="footer">
+      <div class = "wrapper">   
+        <nav>    
+            <ul class ="nav">
+              <li><a href="#">HOME</a></li>
+              <li><a href="#">FORUM</a></li>
+              <li><a href="#">TUTORIALS</a></li>
+              <li><a href="#">ABOUT US</a></li>
+              <li><a href="#">CONTACT</a></li>
+              <li><a href="#">REPORT AN ERROR</a></li>
+
+
+                <!--
+                <h3 class="subtitle-1">Blogs for Updates</h3>
+                  <li><a href="facebook.com">Facebook</a></li>
+                  <li><a href="twitter.com">Twitter</a></li>
+                  <li><a href="instagram.com">Instagram</a></li>
+                <h3 class="subtitle-2">Support</h3>
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Staff</a></li>
+                  <li><a href="#">Report an error</a></li>
+                  -->
+
+
+            </ul>
+        </nav>
+      </div>
+    </footer>
+    
+    
+  </body>
+
+  <script src="fp.js" charset="utf-8"></script>
+
+</html>
