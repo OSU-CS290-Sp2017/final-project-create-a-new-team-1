@@ -2,11 +2,18 @@ var allEntryElems = [];
 
 //calculate total amount
 var entryAmounts = document.getElementsByClassName('entry-amount-number');
+var entrySign = document.getElementsByClassName('entry-sign')
 var total = 0;
 for(var i = 0; i < entryAmounts.length; i++){
       var text = entryAmounts[i].textContent;
       var number = Number(text);
-      total += number;
+      console.log(entrySign[i]);
+      if(entrySign[i].textContent == '+'){
+            total += number;
+      }else{
+            total -= number;
+      }
+
 }
 
 x=document.getElementsByClassName("total-amount");  // Find the elements
@@ -114,25 +121,27 @@ function clearEntryInputValues() {
  * the two or three necessary arguments
  */
 
-function generateNewEntryElem(entryAmount, entryName, entryDesc) {
+function generateNewEntryElem(entryAmount, entryName, entryDesc, entrySign) {
 
   var entryTemplate = Handlebars.templates.entry;
   var entryData = {
     amount: entryAmount,
     name: entryName,
-    desc: entryDesc
+    desc: entryDesc,
+    sign: entrySign
   };
 
   return entryTemplate(entryData);
 
 }
 
-function generateNewEntryElem2(entryAmount, entryDesc) {
+function generateNewEntryElem2(entryAmount, entryDesc, entrySign) {
 
   var entryTemplate = Handlebars.templates.entry;
   var entryData = {
     amount: entryAmount,
-    desc: entryDesc
+    desc: entryDesc,
+    sign: entrySign
   };
 
   return entryTemplate(entryData);
@@ -158,7 +167,7 @@ function insertNewEntry() {
         window.alert("The entry amount should be a number!");
   }else if(entryAmount && entryName && entryDesc) {
 
-      var newEntryElem = generateNewEntryElem(entryAmount, entryName, entryDesc);
+      var newEntryElem = generateNewEntryElem(entryAmount, entryName, entryDesc, "-");
       var entryContainer = document.querySelector('.entry-container');
       entryContainer.insertAdjacentHTML('afterbegin', newEntryElem);
       allEntryElems.push(newEntryElem);
@@ -184,13 +193,20 @@ function insertNewEntry2() {
    * Only generate the new entry if the user supplied values for both the entry
    * amount and the entry description. Give an alert if they aren't filled out.
    */
-  if(entryAmount && entryDesc) {
+   if(isNaN(entryAmount)){
+         window.alert("The entry amount should be a number!");
+   }else if(entryAmount && entryDesc) {
 
-    var newEntryElem = generateNewEntryElem2(entryAmount, entryDesc);
+    var newEntryElem = generateNewEntryElem2(entryAmount, entryDesc, "+");
       var entryContainer = document.querySelector('.entry-container');
       entryContainer.insertAdjacentHTML('afterbegin', newEntryElem);
       allEntryElems.push(newEntryElem);
-
+      typeof entryAmount === 'number';
+      console.log("New Entry Amount: ", entryAmount);
+      total = parseFloat(entryAmount) + parseFloat(total);
+      total = parseFloat(Math.round(total * 100) / 100).toFixed(2);
+      x[0].innerText = total;
+      console.log("Total: ", total);
       closecreateEntryModal2();
   }
 
@@ -215,7 +231,7 @@ function insertNewEntry3() {
       window.alert("The entry amount should be a number!");
 }else if(entryAmount && entryDesc) {
 
-    var newEntryElem = generateNewEntryElem2(entryAmount, entryDesc);
+    var newEntryElem = generateNewEntryElem2(entryAmount, entryDesc, "-");
       var entryContainer = document.querySelector('.entry-container');
       entryContainer.insertAdjacentHTML('afterbegin', newEntryElem);
       allEntryElems.push(newEntryElem);
