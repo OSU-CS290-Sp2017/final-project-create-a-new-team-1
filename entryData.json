@@ -1,10 +1,18 @@
 [
       {
-      "amount": 420,
-      "desc": "Started blazing."
+            "amount": 200,
+            "desc": "Lost a bet",
+            "sign": "-",
+            "name": "Brian"
       },
       {
-      "amount": 500,
-      "desc": "Got paid from work."
+            "amount": 100,
+            "desc": "For textbooks",
+            "sign": "-"
+      },
+      {
+            "amount": 800,
+            "desc": "Got paid from work.",
+            "sign": "+"
       }
 ]
