@@ -4,7 +4,7 @@ var express = require('express');
 var exphbs = require('express-handlebars');
 var fs = require('fs');
 var app = express();
-var port = process.env.PORT || 3002;
+var port = process.env.PORT || 3000;
 
 app.engine('handlebars', exphbs({defaultLayout: 'fp'}));
 app.set('view engine', 'handlebars');
