@@ -149,7 +149,7 @@ img {
 .total-container{
       padding: 5px;
       display: flex;
-      position: fixed;
+      position: absolute;
       right: 10px;
       top: 110px;
       width: 120px;
