@@ -2,11 +2,18 @@ var allEntryElems = [];
 
 //calculate total amount
 var entryAmounts = document.getElementsByClassName('entry-amount-number');
+var entrySign = document.getElementsByClassName('entry-sign')
 var total = 0;
 for(var i = 0; i < entryAmounts.length; i++){
       var text = entryAmounts[i].textContent;
       var number = Number(text);
-      total += number;
+      console.log(entrySign[i]);
+      if(entrySign[i].textContent == '+'){
+            total += number;
+      }else{
+            total -= number;
+      }
+
 }
 
 x=document.getElementsByClassName("total-amount");  // Find the elements
