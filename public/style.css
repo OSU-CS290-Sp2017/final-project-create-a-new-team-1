@@ -94,7 +94,10 @@ a:focus {
   font-size: 30px;
   font-weight: 400;
   color: #000000;
-  
+}
+
+img {
+  height: 50px;
 }
 
 .navbar-search {
