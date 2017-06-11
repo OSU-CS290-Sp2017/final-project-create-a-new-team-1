@@ -2,11 +2,19 @@ var allEntryElems = [];
 
 //calculate total amount
 var entryAmounts = document.getElementsByClassName('entry-amount-number');
+var entrySign = document.getElementsByClassName('entry-sign')
 var total = 0;
 for(var i = 0; i < entryAmounts.length; i++){
       var text = entryAmounts[i].textContent;
       var number = Number(text);
-      total += number;
+      console.log(entrySign[i]);
+      if(entrySign[i].textContent == "+"){
+            total += number;
+
+      }else{
+            total -= number;
+      }
+
 }
 
 x=document.getElementsByClassName("total-amount");  // Find the elements
@@ -114,25 +122,27 @@ function clearEntryInputValues() {
  * the two or three necessary arguments
  */
 
-function generateNewEntryElem(entryAmount, entryName, entryDesc) {
+function generateNewEntryElem(entryAmount, entryName, entryDesc, entrySign) {
 
   var entryTemplate = Handlebars.templates.entry;
   var entryData = {
     amount: entryAmount,
     name: entryName,
-    desc: entryDesc
+    desc: entryDesc,
+    sign: entrySign
   };
 
   return entryTemplate(entryData);
 
 }
 
-function generateNewEntryElem2(entryAmount, entryDesc) {
+function generateNewEntryElem2(entryAmount, entryDesc, entrySign) {
 
   var entryTemplate = Handlebars.templates.entry;
   var entryData = {
     amount: entryAmount,
-    desc: entryDesc
+    desc: entryDesc,
+    sign: entrySign
   };
 
   return entryTemplate(entryData);
@@ -158,7 +168,7 @@ function insertNewEntry() {
         window.alert("The entry amount should be a number!");
   }else if(entryAmount && entryName && entryDesc) {
 
-      var newEntryElem = generateNewEntryElem(entryAmount, entryName, entryDesc);
+      var newEntryElem = generateNewEntryElem(entryAmount, entryName, entryDesc, "-");
       var entryContainer = document.querySelector('.entry-container');
       entryContainer.insertAdjacentHTML('afterbegin', newEntryElem);
       allEntryElems.push(newEntryElem);
@@ -184,13 +194,20 @@ function insertNewEntry2() {
    * Only generate the new entry if the user supplied values for both the entry
    * amount and the entry description. Give an alert if they aren't filled out.
    */
-  if(entryAmount && entryDesc) {
+   if(isNaN(entryAmount)){
+         window.alert("The entry amount should be a number!");
+   }else if(entryAmount && entryDesc) {
 
-    var newEntryElem = generateNewEntryElem2(entryAmount, entryDesc);
+    var newEntryElem = generateNewEntryElem2(entryAmount, entryDesc, "+");
       var entryContainer = document.querySelector('.entry-container');
       entryContainer.insertAdjacentHTML('afterbegin', newEntryElem);
       allEntryElems.push(newEntryElem);
-
+      typeof entryAmount === 'number';
+      console.log("New Entry Amount: ", entryAmount);
+      total = parseFloat(entryAmount) + parseFloat(total);
+      total = parseFloat(Math.round(total * 100) / 100).toFixed(2);
+      x[0].innerText = total;
+      console.log("Total: ", total);
       closecreateEntryModal2();
   }
 
@@ -215,7 +232,7 @@ function insertNewEntry3() {
       window.alert("The entry amount should be a number!");
 }else if(entryAmount && entryDesc) {
 
-    var newEntryElem = generateNewEntryElem2(entryAmount, entryDesc);
+    var newEntryElem = generateNewEntryElem2(entryAmount, entryDesc, "-");
       var entryContainer = document.querySelector('.entry-container');
       entryContainer.insertAdjacentHTML('afterbegin', newEntryElem);
       allEntryElems.push(newEntryElem);
@@ -237,6 +254,7 @@ function insertNewEntry3() {
  * entered in the navbar.  Only display entries that match the search query.
  * Display all entries if the search query is empty.
  */
+ /*
 function doEntrySearch() {
       console.log("In do entry search");
   // Grab the search query, make sure it's not null, and do some preprocessing.
@@ -252,7 +270,7 @@ function doEntrySearch() {
   /*
    * Loop through the collection of all entries and add entries back into the DOM
    * if they contain the search term or if the search term is empty.
-   */
+   *//*
   allEntryElems.forEach(function (entryElem) {
     if (!searchQuery || entryElem.textContent.toLowerCase().indexOf(searchQuery) !== -1) {
       entryContainer.appendChild(entryElem);
@@ -310,14 +328,44 @@ window.addEventListener('DOMContentLoaded', function () {
   modalAcceptButton3.addEventListener('click', insertNewEntry3);
 
   var searchButton = document.getElementById('navbar-search-button');
-  searchButton.addEventListener('click', doEntrySearch);
+  //searchButton.addEventListener('click', doEntrySearch);
 
   var searchInput = document.getElementById('navbar-search-input');
-  searchInput.addEventListener('input', doEntrySearch);
+  //searchInput.addEventListener('input', doEntrySearch);
 
 });
+
 var searchButton = document.getElementById('navbar-search-button');
-searchButton.addEventListener('click', doEntrySearch);
+//searchButton.addEventListener('click', doEntrySearch);
 
 var searchInput = document.getElementById('navbar-search-input');
-searchInput.addEventListener('input', doEntrySearch);
+//searchInput.addEventListener('input', doEntrySearch);
+
+
+function handleSearch(event){
+      console.log("In handlesearch");
+      var entries = document.getElementsByClassName('entry');
+      console.log("Entries", entries);
+      var searchTerm = document.getElementById('navbar-search-input').value;
+      var entryAmount = document.getElementsByClassName("entry-amount-number");
+      var entryDescription = document.getElementsByClassName('entry-description');
+      var name = document.getElementsByClassName('entry-name');
+
+      for(var i = 0; i < entries.length; i++){
+            console.log(searchTerm);
+            console.log(entryAmount);
+            console.log(entryDescription);
+            console.log(name);
+            if(entries[i].textContent.toLowerCase().indexOf(searchTerm.toLowerCase()) === -1 &&
+             
+              entryDescription[i].textContent.toLowerCase().indexOf(searchTerm.toLowerCase()) === -1){
+                  entries[i].classList.add('hidden');
+            }else{
+                  entries[i].classList.remove('hidden');
+            }
+      }
+
+}
+
+searchInput.addEventListener('input', handleSearch);
+searchButton.addEventListener('click', handleSearch);
