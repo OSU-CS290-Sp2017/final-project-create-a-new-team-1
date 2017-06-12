@@ -521,6 +521,7 @@ footer nav ul li a{
 }
 
 .error-container h2 {
+  font-family: Orbitron;
   margin: 10px 0;
   font-size: 96px;
   font-weight: 100;
@@ -528,6 +529,138 @@ footer nav ul li a{
 
 .error-container h3 {
   margin: 10px 0;
+  font-size: 50px;
+  font-weight: 400;
+}
+
+.error-container h4 {
+  margin: 10px 0;
   font-size: 36px;
   font-weight: 400;
+}
+
+.about-container {
+  margin: 100px;
+  margin-top: 50px;
+  text-align: center;
+  min-width: 400px;
+  border-radius: 25px;
+  border: 3px;
+  background-color: #ffffff;
+  border-style: outset;
+  border-color: #43840b;
+  background-image: url(https://www.transparenttextures.com/patterns/diamond-upholstery.png);
+}
+
+.about-container a:hover, a:focus {
+  color: #43840b;
+}
+
+.about-container h2 {
+  font-family: Orbitron;
+  margin: 50px 0px 50px 0px;
+  font-size: 60px;
+  font-weight: 100;
+}
+
+.about-container p {
+  margin: 10px;
+  padding: 0 50px 50px 50px;
+  font-size: 28px;
+  font-weight: 100;
+  text-align: justify;
+}
+
+.help-container {
+  margin: 100px;
+  margin-top: 50px;
+  text-align: center;
+  min-width: 400px;
+  border-radius: 25px;
+  border: 3px;
+  background-color: #ffffff;
+  border-style: outset;
+  border-color: #43840b;
+  background-image: url(https://www.transparenttextures.com/patterns/diamond-upholstery.png);
+}
+
+.help-container a:hover, a:focus {
+  color: #43840b;
+}
+
+.help-container h2 {
+  font-family: Orbitron;
+  margin: 50px 0px 50px 0px;
+  font-size: 60px;
+  font-weight: 100;
+}
+
+.help-container p {
+  margin: 10px;
+  padding: 0 50px 50px 50px;
+  font-size: 28px;
+  font-weight: 100;
+  text-align: justify;
+}
+
+.contact-container {
+  margin: 100px;
+  margin-top: 50px;
+  text-align: center;
+  min-width: 400px;
+  border-radius: 25px;
+  border: 3px;
+  background-color: #ffffff;
+  border-style: outset;
+  border-color: #43840b;
+  background-image: url(https://www.transparenttextures.com/patterns/diamond-upholstery.png);
+}
+
+.contact-container a:hover, a:focus {
+  color: #43840b;
+}
+
+.contact-container h2 {
+  font-family: Orbitron;
+  margin: 50px 0px 50px 0px;
+  font-size: 60px;
+  font-weight: 100;
+}
+
+.contact-container p {
+  margin: 10px;
+  padding: 0 50px 50px 50px;
+  font-size: 28px;
+  font-weight: 100;
+}
+
+.report-container {
+  margin: 100px;
+  margin-top: 50px;
+  text-align: center;
+  min-width: 400px;
+  border-radius: 25px;
+  border: 3px;
+  background-color: #ffffff;
+  border-style: outset;
+  border-color: #43840b;
+  background-image: url(https://www.transparenttextures.com/patterns/diamond-upholstery.png);
+}
+
+.report-container a:hover, a:focus {
+  color: #43840b;
+}
+
+.report-container h2 {
+  font-family: Orbitron;
+  margin: 50px 0px 50px 0px;
+  font-size: 60px;
+  font-weight: 100;
+}
+
+.report-container p {
+  margin: 10px;
+  padding: 0 50px 50px 50px;
+  font-size: 28px;
+  font-weight: 100;
 }
