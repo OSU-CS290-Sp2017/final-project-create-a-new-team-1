@@ -141,7 +141,7 @@ img {
 }
 
 .entry-container {
-  margin: 18px 10%; /*Originally 50px 10%*/
+  margin: 35px 10%; /*Originally 50px 10%*/
   display: flex;
   flex-wrap: wrap;
 }
