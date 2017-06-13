@@ -197,7 +197,6 @@ function insertNewEntry2() {
 
   var entryAmount = document.getElementById('entry-amount-input2').value;
   var entryDesc = document.getElementById('entry-description-input2').value;
-  var entryName = 0;
   /*
    * Only generate the new entry if the user supplied values for both the entry
    * amount and the entry description. Give an alert if they aren't filled out.
@@ -206,7 +205,7 @@ function insertNewEntry2() {
     window.alert("The entry amount should be a number!");
   }
   else if(entryAmount && entryDesc) {
-    storeEntry(entryAmount, entryName, entryDesc, "+", function(err) {
+    storeEntry(entryAmount, 0, entryDesc, "+", function(err) {
       if(err){
         alert("Unable to save the entry. Got this error:\n\n" + err);
       }
@@ -248,7 +247,7 @@ function insertNewEntry3() {
     window.alert("The entry amount should be a number!");
   }
   else if(entryAmount && entryDesc) {
-    storeEntry(entryAmount, entryName, entryDesc, "-", function(err) {
+    storeEntry(entryAmount, 0, entryDesc, "-", function(err) {
       if(err){
         alert("Unable to save the entry. Got this error:\n\n" + err);
       }
