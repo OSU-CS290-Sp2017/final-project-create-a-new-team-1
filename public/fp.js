@@ -179,7 +179,7 @@ function insertNewEntry() {
         entryContainer.insertAdjacentHTML('afterbegin', newEntryElem);
         //allEntryElems.push(newEntryElem);
       }
-    }
+    });
     total -= entryAmount;
     total=parseFloat(Math.round(total * 100) / 100).toFixed(2);
     x[0].innerText=total;
@@ -215,7 +215,7 @@ function insertNewEntry2() {
         entryContainer.insertAdjacentHTML('afterbegin', newEntryElem);
         //allEntryElems.push(newEntryElem);
       }
-    }
+    });
     typeof entryAmount === 'number';
     console.log("New Entry Amount: ", entryAmount);
     total = parseFloat(entryAmount) + parseFloat(total);
@@ -257,7 +257,7 @@ function insertNewEntry3() {
         entryContainer.insertAdjacentHTML('afterbegin', newEntryElem);
         //allEntryElems.push(newEntryElem);
       }
-    }
+    });
     total -= entryAmount;
     total=parseFloat(Math.round(total * 100) / 100).toFixed(2);
     x[0].innerText=total;
