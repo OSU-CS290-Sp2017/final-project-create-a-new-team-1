@@ -7,7 +7,7 @@ var total = 0;
 for(var i = 0; i < entryAmounts.length; i++){
       var text = entryAmounts[i].textContent;
       var number = Number(text);
-      console.log(entrySign[i]);
+      //console.log(entrySign[i]);
       if(entrySign[i].textContent == "+"){
             total += number;
 
