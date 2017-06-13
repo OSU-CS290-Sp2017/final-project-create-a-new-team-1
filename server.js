@@ -39,6 +39,8 @@ app.post('/', function (req, res, next) {
 		name: req.body.name
       };
 
+      entry = entry || [];
+
       entry.unshift(entryd); // ??
       fs.writeFile('entryData.json', JSON.stringify(entryData), function (err) {
         if (err) {
@@ -54,6 +56,8 @@ app.post('/', function (req, res, next) {
         sign: req.body.sign,
         desc: req.body.desc
       };
+
+	  entry = entry || [];
 
       entry.unshift(entryd); // ??
       fs.writeFile('entryData.json', JSON.stringify(entryData), function (err) {
