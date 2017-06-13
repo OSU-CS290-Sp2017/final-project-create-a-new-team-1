@@ -23,35 +23,35 @@ app.get('/', function(req, res, next){
 	}
 });
 
-app.post('/', function (req, res, next) {
-  var entry = entryData[req.params.entry];
+// app.post('/', function (req, res, next) {
+//   var entry = entryData[req.params.entry];
 
-  if (entry) { // ?
-    if (req.body && req.body.url) {
+//   if (entry) { // ?
+//     if (req.body && req.body.url) {
 
-      var entry = { // ??
-        amount: req.body.amount,
-	name: req.body.name,
-        description: req.body.desc
-      };
+//       var entry = { // ??
+//         amount: req.body.amount,
+// 	name: req.body.name,
+//         description: req.body.desc
+//       };
 
-      person.photos.push(photo); // ??
-      fs.writeFile('entryData.json', JSON.stringify(entryData), function (err) {
-        if (err) {
-          res.status(500).send("Unable to save entry to \"database\".");
-        } else {
-          res.status(200).send();
-        }
-      });
+//       person.photos.push(photo); // ??
+//       fs.writeFile('entryData.json', JSON.stringify(entryData), function (err) {
+//         if (err) {
+//           res.status(500).send("Unable to save entry to \"database\".");
+//         } else {
+//           res.status(200).send();
+//         }
+//       });
 
-    } else {
-      res.status(400).send("The entry must have an amount.");
-    }
+//     } else {
+//       res.status(400).send("The entry must have an amount.");
+//     }
 
-  } else {
-    next();
-  }
-});
+//   } else {
+//     next();
+//   }
+// });
 
 app.use(express.static(path.join(__dirname, 'public')));
 
