@@ -1,11 +1,5 @@
 var allEntryElems = [];
 
-Handlebars.registerHelper("strong", function(object) {
-  text = Handlebars.escapeExpression(object.text);
-
-  return new Handlebars.SafeString("<strong>" + text + "</strong>");
-});
-
 //calculate total amount
 var entryAmounts = document.getElementsByClassName('entry-amount-number');
 var entrySign = document.getElementsByClassName('entry-sign')
@@ -13,7 +7,7 @@ var total = 0;
 for(var i = 0; i < entryAmounts.length; i++){
       var text = entryAmounts[i].textContent;
       var number = Number(text);
-      console.log(entrySign[i]);
+      //console.log(entrySign[i]);
       if(entrySign[i].textContent == "+"){
             total += number;
 
@@ -167,23 +161,29 @@ function insertNewEntry() {
    * Only generate the new entry if the user supplied values for the entry
    * amount, entry name and entry description.
    */
-   if(total - entryAmount < 0) {
-         var stringWarning = "You can only transfer at most $" + total + "!";
-         window.alert(stringWarning);
-  }else if(isNaN(entryAmount)){
-        window.alert("The entry amount should be a number!");
-  }else if(entryAmount && entryName && entryDesc) {
-
-      var newEntryElem = generateNewEntryElem(entryAmount, entryName, entryDesc, "-");
-      var entryContainer = document.querySelector('.entry-container');
-      entryContainer.insertAdjacentHTML('afterbegin', newEntryElem);
-      allEntryElems.push(newEntryElem);
-
-      total -= entryAmount;
-      total=parseFloat(Math.round(total * 100) / 100).toFixed(2);
-      x[0].innerText=total;
-      closecreateEntryModal();
-
+  if(total - entryAmount < 0) {
+    var stringWarning = "You can only transfer at most $" + total + "!";
+    window.alert(stringWarning);
+  }
+  else if(isNaN(entryAmount)){
+    window.alert("The entry amount should be a number!");
+  }
+  else if(entryAmount && entryName && entryDesc) {
+    storeEntry(entryAmount, entryName, entryDesc, "-", function(err) {
+      if(err){
+        alert("Unable to save the entry. Got this error:\n\n" + err);
+      }
+      else{
+        var newEntryElem = generateNewEntryElem(entryAmount, entryName, entryDesc, "-");
+        var entryContainer = document.querySelector('.entry-container');
+        entryContainer.insertAdjacentHTML('afterbegin', newEntryElem);
+        //allEntryElems.push(newEntryElem);
+      }
+    });
+    total -= entryAmount;
+    total=parseFloat(Math.round(total * 100) / 100).toFixed(2);
+    x[0].innerText=total;
+    closecreateEntryModal();
   }
 
   else {
@@ -192,6 +192,7 @@ function insertNewEntry() {
 
   }
 }
+
 function insertNewEntry2() {
 
   var entryAmount = document.getElementById('entry-amount-input2').value;
@@ -200,29 +201,36 @@ function insertNewEntry2() {
    * Only generate the new entry if the user supplied values for both the entry
    * amount and the entry description. Give an alert if they aren't filled out.
    */
-   if(isNaN(entryAmount)){
-         window.alert("The entry amount should be a number!");
-   }else if(entryAmount && entryDesc) {
-
-    var newEntryElem = generateNewEntryElem2(entryAmount, entryDesc, "+");
-      var entryContainer = document.querySelector('.entry-container');
-      entryContainer.insertAdjacentHTML('afterbegin', newEntryElem);
-      allEntryElems.push(newEntryElem);
-      typeof entryAmount === 'number';
-      console.log("New Entry Amount: ", entryAmount);
-      total = parseFloat(entryAmount) + parseFloat(total);
-      total = parseFloat(Math.round(total * 100) / 100).toFixed(2);
-      x[0].innerText = total;
-      console.log("Total: ", total);
-      closecreateEntryModal2();
+  if(isNaN(entryAmount)){
+    window.alert("The entry amount should be a number!");
   }
-
+  else if(entryAmount && entryDesc) {
+    storeEntry(entryAmount, 0, entryDesc, "+", function(err) {
+      if(err){
+        alert("Unable to save the entry. Got this error:\n\n" + err);
+      }
+      else{
+        var newEntryElem = generateNewEntryElem2(entryAmount, entryDesc, "+");
+        var entryContainer = document.querySelector('.entry-container');
+        entryContainer.insertAdjacentHTML('afterbegin', newEntryElem);
+        //allEntryElems.push(newEntryElem);
+      }
+    });
+    typeof entryAmount === 'number';
+    console.log("New Entry Amount: ", entryAmount);
+    total = parseFloat(entryAmount) + parseFloat(total);
+    total = parseFloat(Math.round(total * 100) / 100).toFixed(2);
+    x[0].innerText = total;
+    console.log("Total: ", total);
+    closecreateEntryModal2();
+  }
   else {
 
     alert('Make sure all boxes are filled out!');
 
   }
 }
+
 function insertNewEntry3() {
 
   var entryAmount = document.getElementById('entry-amount-input3').value;
@@ -232,23 +240,29 @@ function insertNewEntry3() {
    * amount and the entry description. Give an alert if they aren't filled out.
    */
   if(total - entryAmount < 0){
-        var stringWarning = "You can only withdraw at most $" + total + "!";
-        window.alert(stringWarning);
- }else if(isNaN(entryAmount)){
-      window.alert("The entry amount should be a number!");
-}else if(entryAmount && entryDesc) {
-
-    var newEntryElem = generateNewEntryElem2(entryAmount, entryDesc, "-");
-      var entryContainer = document.querySelector('.entry-container');
-      entryContainer.insertAdjacentHTML('afterbegin', newEntryElem);
-      allEntryElems.push(newEntryElem);
-
-      total -= entryAmount;
-      total=parseFloat(Math.round(total * 100) / 100).toFixed(2);
-      x[0].innerText=total;
-      closecreateEntryModal3();
+    var stringWarning = "You can only withdraw at most $" + total + "!";
+    window.alert(stringWarning);
   }
-
+  else if(isNaN(entryAmount)){
+    window.alert("The entry amount should be a number!");
+  }
+  else if(entryAmount && entryDesc) {
+    storeEntry(entryAmount, 0, entryDesc, "-", function(err) {
+      if(err){
+        alert("Unable to save the entry. Got this error:\n\n" + err);
+      }
+      else{
+        var newEntryElem = generateNewEntryElem2(entryAmount, entryDesc, "-");
+        var entryContainer = document.querySelector('.entry-container');
+        entryContainer.insertAdjacentHTML('afterbegin', newEntryElem);
+        //allEntryElems.push(newEntryElem);
+      }
+    });
+    total -= entryAmount;
+    total=parseFloat(Math.round(total * 100) / 100).toFixed(2);
+    x[0].innerText=total;
+    closecreateEntryModal3();
+  }
   else {
 
     alert('Make sure all boxes are filled out!');
@@ -284,7 +298,41 @@ function doEntrySearch() {
   });
 
 }
+*/
 
+function storeEntry(amount, name, desc, sign, callback) {
+
+  var postRequest = new XMLHttpRequest();
+  postRequest.open('POST', "/");
+  postRequest.setRequestHeader('Content-Type', 'application/json');
+
+  postRequest.addEventListener('load', function (event) {
+    var error;
+    if (event.target.status !== 200) {
+      error = event.target.response;
+    }
+    callback(error);
+  });
+
+  if(name){
+    var postBody = {
+      amount: amount,
+      desc: desc,
+      sign: sign,
+      name: name
+    };
+  }
+  else{
+    var postBody = {
+      amount: amount,
+      desc: desc,
+      sign: sign
+    };
+  }
+
+  postRequest.send(JSON.stringify(postBody));
+
+}
 
 /*
  * Wait until the DOM content is loaded, and then hook up UI interactions, etc.
