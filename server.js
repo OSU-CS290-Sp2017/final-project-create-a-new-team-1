@@ -1,5 +1,6 @@
 var path = require('path');
 var entryData = require('./entryData');
+var bodyParser = require('body-parser');
 var express = require('express');
 var exphbs = require('express-handlebars');
 var fs = require('fs');
@@ -8,6 +9,8 @@ var port = process.env.PORT || 3000;
 
 app.engine('handlebars', exphbs({defaultLayout: 'fp'}));
 app.set('view engine', 'handlebars');
+
+app.use(bodyParser.json());
 
 app.get('/', function(req, res, next){
 	var entry = entryData;
@@ -23,35 +26,49 @@ app.get('/', function(req, res, next){
 	}
 });
 
-// app.post('/', function (req, res, next) {
-//   var entry = entryData[req.params.entry];
+app.post('/', function (req, res, next) {
+  var entry = entryData;
 
-//   if (entry) { // ?
-//     if (req.body && req.body.url) {
+  if (entry) { // ?
+    if (req && req.name) {
 
-//       var entry = { // ??
-//         amount: req.body.amount,
-// 	name: req.body.name,
-//         description: req.body.desc
-//       };
+      var entryd = { // ??
+        amount: req.body.amount,
+        sign: req.body.sign,
+        desc: req.body.desc,
+		name: req.body.name
+      };
 
-//       person.photos.push(photo); // ??
-//       fs.writeFile('entryData.json', JSON.stringify(entryData), function (err) {
-//         if (err) {
-//           res.status(500).send("Unable to save entry to \"database\".");
-//         } else {
-//           res.status(200).send();
-//         }
-//       });
+      entry.unshift(entryd); // ??
+      fs.writeFile('entryData.json', JSON.stringify(entryData), function (err) {
+        if (err) {
+          res.status(500).send("Unable to save entry to \"database\".");
+        } else {
+          res.status(200).send();
+        }
+      });
+    } 
+    else {
+      var entryd = { // ??
+        amount: req.body.amount,
+        sign: req.body.sign,
+        desc: req.body.desc
+      };
 
-//     } else {
-//       res.status(400).send("The entry must have an amount.");
-//     }
+      entry.unshift(entryd); // ??
+      fs.writeFile('entryData.json', JSON.stringify(entryData), function (err) {
+        if (err) {
+          res.status(500).send("Unable to save entry to \"database\".");
+        } else {
+          res.status(200).send();
+        }
+      });
+    }
 
-//   } else {
-//     next();
-//   }
-// });
+  } else {
+    next();
+  }
+});
 
 app.use(express.static(path.join(__dirname, 'public')));
 

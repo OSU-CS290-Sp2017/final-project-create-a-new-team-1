@@ -303,6 +303,7 @@ function doEntrySearch() {
 function storeEntry(amount, name, desc, sign, callback) {
 
   var postRequest = new XMLHttpRequest();
+  postRequest.open('POST', "/");
   postRequest.setRequestHeader('Content-Type', 'application/json');
 
   postRequest.addEventListener('load', function (event) {
