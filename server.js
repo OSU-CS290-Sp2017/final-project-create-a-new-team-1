@@ -15,27 +15,25 @@ app.get('/', function(req, res, next){
 		var templateArgs = {
 			entries: entry,
 			show: true
-		}
+		};
 		res.render('entryPage', templateArgs);
 	}
 	else{
 		next();
 	}
 });
-/*
-app.post('/entries/:entry/addEntry', function (req, res, next) {
+
+app.post('/', function (req, res, next) {
   var entry = entryData[req.params.entry];
 
   if (entry) { // ?
-    if (req.body && req.body.url) { // ??
+    if (req.body && req.body.url) {
 
       var entry = { // ??
-        amount: req.body.amount, // ??
-	name: req.body.name, // ??
-        description: req.body.desc // ??
+        amount: req.body.amount,
+	name: req.body.name,
+        description: req.body.desc
       };
-
-      person.photos = person.photos || []; //entry.entries ?? ??
 
       person.photos.push(photo); // ??
       fs.writeFile('entryData.json', JSON.stringify(entryData), function (err) {
@@ -47,14 +45,14 @@ app.post('/entries/:entry/addEntry', function (req, res, next) {
       });
 
     } else {
-      res.status(400).send("The entry must have an amount."); // eh
+      res.status(400).send("The entry must have an amount.");
     }
 
   } else {
     next();
   }
 });
-*/
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/help', function (req, res) {

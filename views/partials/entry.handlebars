@@ -4,15 +4,15 @@
   </div>
   <div class="entry-content">
     <p class="entry-amount">
-      Amount: <span class = "entry-sign">{{sign}}</span>$<span class = "entry-amount-number">{{amount}}</span>
+      <span class = "bold">Accept:</span> <span class = "entry-sign">{{sign}}</span>$<span class = "entry-amount-number">{{amount}}</span>
     </p>
     {{#if name}}
       <p class="entry-name">
-        Recipient: {{name}}
+        <span class = "bold">Recipient:</span> {{name}}
       </p>
     {{/if}}
     <p class="entry-description">
-       Description: {{desc}}
+      <span class = "bold">Description:</span> {{desc}}
     </p>
   </div>
 </article>
