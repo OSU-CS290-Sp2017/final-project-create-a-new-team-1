@@ -253,7 +253,7 @@ img {
 #create-entry-button1 {
   position: fixed;
   right: 30px;
-  bottom: 260px;
+  bottom: 300px;
   height: 60px;
   width: 60px;
   border: none;
@@ -268,7 +268,7 @@ img {
 #create-entry-button2 {
   position: fixed;
   right: 30px;
-  bottom: 170px;
+  bottom: 210px;
   height: 60px;
   width: 60px;
   border: none;
@@ -283,7 +283,7 @@ img {
 #create-entry-button3 {
   position: fixed;
   right: 30px;
-  bottom: 80px;
+  bottom: 120px;
   height: 60px;
   width: 60px;
   border: none;
@@ -509,6 +509,15 @@ html{
   padding: 10px 15px 10px 15px;
 }
 .link6{
+  padding: 10px 15px 10px 15px;
+}
+.link7{
+  padding: 10px 15px 10px 15px;
+}
+.link8{
+  padding: 10px 15px 10px 15px;
+}
+.link9{
   padding: 10px 15px 10px 15px;
 }
 .link1:hover{
