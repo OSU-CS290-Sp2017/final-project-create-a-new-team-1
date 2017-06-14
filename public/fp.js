@@ -165,12 +165,13 @@ function insertNewEntry() {
     var stringWarning = "You can only transfer at most $" + total + "!";
     window.alert(stringWarning);
   }
-      else if(entryAmount * 100 % 1 != 0){
-            window.alert("Invalid input. The amount of money can't have more than 2 decimal place values!");
-      }
+
   else if(isNaN(entryAmount)){
     window.alert("The entry amount should be a number!");
   }
+   else if(entryAmount * 100 % 1 != 0){
+      window.alert("Invalid input. The amount of money can't have more than 2 decimal place values!");
+   }      
   else if(entryAmount && entryName && entryDesc) {
     storeEntry(entryAmount, entryName, entryDesc, "-", function(err) {
       if(err){
@@ -249,12 +250,12 @@ function insertNewEntry3() {
     var stringWarning = "You can only withdraw at most $" + total + "!";
     window.alert(stringWarning);
   }
-  else if(entryAmount * 100 % 1 != 0){
-      window.alert("Invalid input. The amount of money can't have more than 2 decimal place values!");
-  }    
   else if(isNaN(entryAmount)){
     window.alert("The entry amount should be a number!");
   }
+  else if(entryAmount * 100 % 1 != 0){
+    window.alert("Invalid input. The amount of money can't have more than 2 decimal place values!");
+  }        
   else if(entryAmount && entryDesc) {
     storeEntry(entryAmount, 0, entryDesc, "-", function(err) {
       if(err){
