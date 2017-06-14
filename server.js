@@ -88,6 +88,9 @@ app.get('/contact', function (req, res) {
 app.get('/report', function (req, res) {
   	res.status(200).render('report');
 });
+app.get('/dolladollabillsyall', function (req, res) {
+  	res.status(200).render('money');
+});
 app.get('*', function (req, res) {
   	res.status(404).render('404');
 });
