@@ -60,7 +60,7 @@ function showcreateEntryModal3() {
 }
 
 /*
- * This function hides the modal to create a entry and clears any existing
+ * This function hides the modal to create an entry and clears any existing
  * values from the input fields whenever any of the modal close actions are
  * taken.
  */

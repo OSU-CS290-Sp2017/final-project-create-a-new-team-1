@@ -5,7 +5,7 @@ var express = require('express');
 var exphbs = require('express-handlebars');
 var fs = require('fs');
 var app = express();
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 3002;
 
 app.engine('handlebars', exphbs({defaultLayout: 'fp'}));
 app.set('view engine', 'handlebars');
@@ -29,10 +29,10 @@ app.get('/', function(req, res, next){
 app.post('/', function (req, res, next) {
   var entry = entryData;
 
-  if (entry) { // ?
+  if (entry) {
     if (req && req.body.name) {
 
-      var entryd = { // ??
+      var entryd = {
         amount: req.body.amount,
         sign: req.body.sign,
         desc: req.body.desc,
@@ -41,7 +41,7 @@ app.post('/', function (req, res, next) {
 
       entry = entry || [];
 
-      entry.unshift(entryd); // ??
+      entry.unshift(entryd);
       fs.writeFile('entryData.json', JSON.stringify(entryData), function (err) {
         if (err) {
           res.status(500).send("Unable to save entry to \"database\".");
@@ -51,7 +51,7 @@ app.post('/', function (req, res, next) {
       });
     } 
     else {
-      var entryd = { // ??
+      var entryd = {
         amount: req.body.amount,
         sign: req.body.sign,
         desc: req.body.desc
@@ -59,7 +59,7 @@ app.post('/', function (req, res, next) {
 
 	  entry = entry || [];
 
-      entry.unshift(entryd); // ??
+      entry.unshift(entryd);
       fs.writeFile('entryData.json', JSON.stringify(entryData), function (err) {
         if (err) {
           res.status(500).send("Unable to save entry to \"database\".");
