@@ -279,37 +279,6 @@ function insertNewEntry3() {
 
   }
 }
-/*
- * Perform a search over over all the entries based on the search query the user
- * entered in the navbar.  Only display entries that match the search query.
- * Display all entries if the search query is empty.
- */
- /*
-function doEntrySearch() {
-      console.log("In do entry search");
-  // Grab the search query, make sure it's not null, and do some preprocessing.
-  var searchQuery = document.getElementById('navbar-search-input').value;
-  searchQuery = searchQuery ? searchQuery.trim().toLowerCase() : '';
-
-  // Remove all entries from the entry container temporarily.
-  var entryContainer = document.querySelector('.entry-container');
-  while (entryContainer.lastChild) {
-    entryContainer.removeChild(entryContainer.lastChild);
-  }
-
-  /*
-   * Loop through the collection of all entries and add entries back into the DOM
-   * if they contain the search term or if the search term is empty.
-   *//*
-  allEntryElems.forEach(function (entryElem) {
-    if (!searchQuery || entryElem.textContent.toLowerCase().indexOf(searchQuery) !== -1) {
-      entryContainer.appendChild(entryElem);
-    }
-  });
-
-}
-*/
-
 function storeEntry(amount, name, desc, sign, callback) {
 
   var postRequest = new XMLHttpRequest();
@@ -416,10 +385,6 @@ function handleSearch(event){
       var name = document.getElementsByClassName('entry-name');
 
       for(var i = 0; i < entries.length; i++){
-            console.log(searchTerm);
-            console.log(entryAmount);
-            console.log(entryDescription);
-            console.log(name);
             if(entries[i].textContent.toLowerCase().indexOf(searchTerm.toLowerCase()) === -1 &&
              
               entryDescription[i].textContent.toLowerCase().indexOf(searchTerm.toLowerCase()) === -1){
