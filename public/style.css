@@ -304,7 +304,11 @@ img {
 #create-entry-button1 {
   position: fixed;
   right: 30px;
+<<<<<<< HEAD
   bottom: 320px;
+=======
+  bottom: 300px;
+>>>>>>> ffaf38d86dc4c7b4c16f5c9d5e801a11010d6837
   height: 60px;
   width: 60px;
   border: none;
@@ -319,7 +323,11 @@ img {
 #create-entry-button2 {
   position: fixed;
   right: 30px;
+<<<<<<< HEAD
   bottom: 230px;
+=======
+  bottom: 210px;
+>>>>>>> ffaf38d86dc4c7b4c16f5c9d5e801a11010d6837
   height: 60px;
   width: 60px;
   border: none;
@@ -334,7 +342,11 @@ img {
 #create-entry-button3 {
   position: fixed;
   right: 30px;
+<<<<<<< HEAD
   bottom: 140px;
+=======
+  bottom: 120px;
+>>>>>>> ffaf38d86dc4c7b4c16f5c9d5e801a11010d6837
   height: 60px;
   width: 60px;
   border: none;
@@ -560,6 +572,15 @@ html{
   padding: 10px 15px 10px 15px;
 }
 .link6{
+  padding: 10px 15px 10px 15px;
+}
+.link7{
+  padding: 10px 15px 10px 15px;
+}
+.link8{
+  padding: 10px 15px 10px 15px;
+}
+.link9{
   padding: 10px 15px 10px 15px;
 }
 .link1:hover{
