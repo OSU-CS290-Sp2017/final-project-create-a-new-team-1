@@ -1,14 +1,14 @@
 body {
-  font-family: lato, Helvetica, sans-serif;
+  font-family: Droid Sans Mono, Helvetica, sans-serif;
   margin: 0;
-  background-color: #eee;
+  background-color: #eeeeee;
+  background-image: url("https://www.transparenttextures.com/patterns/diagmonds.png");
 }
 
 a {
   text-decoration: none;
 }
 
-<<<<<<< HEAD
 header{
   box-shadow: 0px 2px 20px 0px #000;
 }
@@ -25,13 +25,6 @@ header{
 }
 
 
-
-
-
-
-
-=======
->>>>>>> 1827a0910b6bb9f017a92873ea2071693984e378
 .logs{
   /*
   background-image:url('banner.jpg');
@@ -54,7 +47,7 @@ header{
   margin-top:15px;
   margin-bottom: 0px; /*delete if h1 connects to content*/
   text-align: center;
-  font-family: lato, Helvetica, sans-serif;
+  font-family: Droid Sans Mono, Helvetica, sans-serif;
   font-weight:normal;
   letter-spacing: 4px;
   color: white;
@@ -64,24 +57,19 @@ header{
     color:black;
 }
 
-.site-title {
-  margin: 0;
-  padding: 10px 20px;
-  font-size: 30px;
-  font-weight: 400;
-  background-color: #57b50c;
-  color: #000000;
-}
-
 .navbar {
-  background-color: #fff;
-  font-size: 18px;
-  line-height: 22px;
+  font-family: Orbitron;
+  background-color: #57b50c;
+  background-image: url("https://www.transparenttextures.com/patterns/batthern.png");
+  font-size: 20px;
+  height: 98px;
 }
 
 .navlist {
-  margin: 0 0 0 20px;
-  padding: 0;
+  margin: 0 0 0 0px;
+  padding-left: 60px;
+  text-align: left;
+
 }
 
 .navitem {
@@ -94,7 +82,7 @@ a {
 
 a:hover,
 a:focus {
-  color: #57b50c;
+  color: #ffffff;
 }
 
 a:focus {
@@ -102,7 +90,7 @@ a:focus {
 }
 
 .navlink a {
-  padding: 8px 10px;
+  padding-right: 30px;
   display: inline-block;
 }
 
@@ -110,11 +98,27 @@ a:focus {
   box-shadow: inset 0 -3px #57b50c;
 }
 
+.site-title {
+  margin-bottom: -37px;
+  float: left;
+  margin-left: -70px;
+  margin-top: 48px;
+  font-size: 30px;
+  font-weight: 400;
+  color: #000000;
+  padding-right: 25px;
+}
+
+img {
+  margin-top: -38px;
+  height: 75px;
+  margin-left: 30px;
+}
+
 .navbar-search {
   float: right;
-  margin-right: 20px;
-  padding: 0;
-  line-height: 38px;
+  margin-right: 10px;
+  margin-top: 33px;
 }
 
 #navbar-search-input {
@@ -140,49 +144,111 @@ a:focus {
 }
 
 #navbar-search-button:hover {
-  color: #57b50c;
+  color: #ffffff;
 }
 
 #navbar-search-button:focus {
-  color: #57b50c;
+  color: #ffffff;
   outline: none;
 }
 
 .entry-container {
-  margin: 18px 10%; /*Originally 50px 10%*/
+  margin: 35px 10%; /*Originally 50px 10%*/
   display: flex;
   flex-wrap: wrap;
+}
+
+.total-container{
+      padding: 5px;
+      display: flex;
+      position: absolute;
+      right: 10px;
+      top: 110px;
+      max-width: 200px;
+      border: 3px;
+      border-radius: 15px;
+      background-color: #ffffff;
+      background-image: url(https://www.transparenttextures.com/patterns/diamond-upholstery.png);
+      border-style: outset;
+      border-color: #43840b;
+}
+
+.total-content{
+      flex: 1 1 80%;
+      margin-left: 10px;
+}
+
+.total-have{
+      text-align: center;
+}
+
+.total-amount{
+      font-weight: bold;
+      color: #43840b;
+      text-align: center;
 }
 
 .entry {
   flex: 0 1 80%;
   display: flex;
   margin: 15px;
-  padding: 20px;
-  border: 1px solid #dadada;
-  border-radius: 2px;
-  background-color: #fff;
+  padding: 10px;
+  border-radius: 25px;
+  border: 3px;
+  background-color: #ffffff;
+  border-style: outset;
+  border-color: #43840b;
+  background-image: url(https://www.transparenttextures.com/patterns/diamond-upholstery.png);
 }
 
 .entry-icon {
-  font-size: 24px;
+  font-size: 60px;
+  color: #43840b;
+  padding-left: 10px;
+  margin-top: -8px;
+}
+
+.entry-icon2 {
+  font-size: 30px;
+  color: #43840b;
+  margin-left: 5px;
 }
 
 .entry-content {
   flex: 1 1 80%;
+  margin-left: 30px;
+  word-break: break-all;
+  white-space: normal;
+}
+
+.entry-content2 {
+  flex: 1 1 80%;
   margin-left: 10px;
+  margin-right: 5px;
+  word-break: break-all;
+  white-space: normal;
+}
+
+.bold{
+  font-weight: bold;
 }
 
 .entry-content p {
   margin: 0;
+  font-size: 25px;
+  padding-bottom: 10px;
 }
 
-.entry-content .entry-attribution {
+.entry-content2 p {
+  margin: 0;
+}
+
+/*.entry-content .entry-name {
   margin-top: 8px;
   text-align: right;
   font-weight: bold;
 }
-
+*/
 #create-entry-button1 {
   position: fixed;
   right: 30px;
@@ -287,6 +353,26 @@ a:focus {
   overflow: scroll;
 }
 
+#create-entry-modal2 {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1010;
+  overflow: scroll;
+}
+
+#create-entry-modal3 {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1010;
+  overflow: scroll;
+}
+
 .hidden {
   display: none;
 }
@@ -337,6 +423,7 @@ a:focus {
   font-weight: 600;
   flex: 1 75px;
   margin-right: 10px;
+  text-align: center;
 }
 
 .entry-input-element input,
@@ -389,7 +476,6 @@ a:focus {
   list-style: none;
 }
 
-<<<<<<< HEAD
 .wrapper{
 
   text-align: center;
@@ -451,10 +537,6 @@ a:focus {
 
 .foooter nav ul li a{
   font-family: Orbitron;
-=======
-footer nav ul li a{
-  font-family: Lato;
->>>>>>> 1827a0910b6bb9f017a92873ea2071693984e378
   font-weight: 400;
   font-size: 14px;
   color:white;
@@ -488,12 +570,21 @@ footer nav ul li a{
 }
 
 .modal-footer .modal-accept-button {
-  background-color: #57b50c;
-  color: #fff;
+  background-color: #28e604;
+  color: #333;
+}
+
+.modal-footer .modal-accept-button2 {
+  background-color: #00c561;
+  color: #333;
 }
 
 .modal-footer .modal-accept-button:hover {
-  background-color: #087dde;
+  background-color: #eee;
+}
+
+.modal-footer .modal-accept-button2:hover {
+  background-color: #eee;
 }
 
 .error-container {
@@ -504,6 +595,7 @@ footer nav ul li a{
 }
 
 .error-container h2 {
+  font-family: Orbitron;
   margin: 10px 0;
   font-size: 96px;
   font-weight: 100;
@@ -511,10 +603,15 @@ footer nav ul li a{
 
 .error-container h3 {
   margin: 10px 0;
+  font-size: 50px;
+  font-weight: 400;
+}
+
+.error-container h4 {
+  margin: 10px 0;
   font-size: 36px;
   font-weight: 400;
 }
-<<<<<<< HEAD
 
 .about-container {
   margin: 100px;
@@ -644,5 +741,3 @@ footer nav ul li a{
 
 
 
-=======
->>>>>>> 1827a0910b6bb9f017a92873ea2071693984e378
