@@ -1,16 +1,11 @@
 body {
-  font-family: Droid Sans Mono, Helvetica, sans-serif;
+  font-family: lato, Helvetica, sans-serif;
   margin: 0;
-  background-color: #eeeeee;
-  background-image: url("https://www.transparenttextures.com/patterns/diagmonds.png");
+  background-color: #eee;
 }
 
 a {
   text-decoration: none;
-}
-
-header{
-  box-shadow: 0px 2px 20px 0px #000;
 }
 
 .logs{
@@ -35,7 +30,7 @@ header{
   margin-top:15px;
   margin-bottom: 0px; /*delete if h1 connects to content*/
   text-align: center;
-  font-family: Droid Sans Mono, Helvetica, sans-serif;
+  font-family: lato, Helvetica, sans-serif;
   font-weight:normal;
   letter-spacing: 4px;
   color: white;
@@ -45,19 +40,24 @@ header{
     color:black;
 }
 
-.navbar {
-  font-family: Orbitron;
+.site-title {
+  margin: 0;
+  padding: 10px 20px;
+  font-size: 30px;
+  font-weight: 400;
   background-color: #57b50c;
-  background-image: url("https://www.transparenttextures.com/patterns/batthern.png");
-  font-size: 20px;
-  height: 98px;
+  color: #000000;
+}
+
+.navbar {
+  background-color: #fff;
+  font-size: 18px;
+  line-height: 22px;
 }
 
 .navlist {
-  margin: 0 0 0 0px;
-  padding-left: 60px;
-  text-align: left;
-
+  margin: 0 0 0 20px;
+  padding: 0;
 }
 
 .navitem {
@@ -70,7 +70,7 @@ a {
 
 a:hover,
 a:focus {
-  color: #ffffff;
+  color: #57b50c;
 }
 
 a:focus {
@@ -78,7 +78,7 @@ a:focus {
 }
 
 .navlink a {
-  padding-right: 30px;
+  padding: 8px 10px;
   display: inline-block;
 }
 
@@ -86,27 +86,11 @@ a:focus {
   box-shadow: inset 0 -3px #57b50c;
 }
 
-.site-title {
-  margin-bottom: -37px;
-  float: left;
-  margin-left: -70px;
-  margin-top: 48px;
-  font-size: 30px;
-  font-weight: 400;
-  color: #000000;
-  padding-right: 25px;
-}
-
-img {
-  margin-top: -38px;
-  height: 75px;
-  margin-left: 30px;
-}
-
 .navbar-search {
   float: right;
-  margin-right: 10px;
-  margin-top: 33px;
+  margin-right: 20px;
+  padding: 0;
+  line-height: 38px;
 }
 
 #navbar-search-input {
@@ -132,111 +116,49 @@ img {
 }
 
 #navbar-search-button:hover {
-  color: #ffffff;
+  color: #57b50c;
 }
 
 #navbar-search-button:focus {
-  color: #ffffff;
+  color: #57b50c;
   outline: none;
 }
 
 .entry-container {
-  margin: 35px 10%; /*Originally 50px 10%*/
+  margin: 18px 10%; /*Originally 50px 10%*/
   display: flex;
   flex-wrap: wrap;
-}
-
-.total-container{
-      padding: 5px;
-      display: flex;
-      position: absolute;
-      right: 10px;
-      top: 110px;
-      max-width: 200px;
-      border: 3px;
-      border-radius: 15px;
-      background-color: #ffffff;
-      background-image: url(https://www.transparenttextures.com/patterns/diamond-upholstery.png);
-      border-style: outset;
-      border-color: #43840b;
-}
-
-.total-content{
-      flex: 1 1 80%;
-      margin-left: 10px;
-}
-
-.total-have{
-      text-align: center;
-}
-
-.total-amount{
-      font-weight: bold;
-      color: #43840b;
-      text-align: center;
 }
 
 .entry {
   flex: 0 1 80%;
   display: flex;
   margin: 15px;
-  padding: 10px;
-  border-radius: 25px;
-  border: 3px;
-  background-color: #ffffff;
-  border-style: outset;
-  border-color: #43840b;
-  background-image: url(https://www.transparenttextures.com/patterns/diamond-upholstery.png);
+  padding: 20px;
+  border: 1px solid #dadada;
+  border-radius: 2px;
+  background-color: #fff;
 }
 
 .entry-icon {
-  font-size: 60px;
-  color: #43840b;
-  padding-left: 10px;
-  margin-top: -8px;
-}
-
-.entry-icon2 {
-  font-size: 30px;
-  color: #43840b;
-  margin-left: 5px;
+  font-size: 24px;
 }
 
 .entry-content {
   flex: 1 1 80%;
-  margin-left: 30px;
-  word-break: break-all;
-  white-space: normal;
-}
-
-.entry-content2 {
-  flex: 1 1 80%;
   margin-left: 10px;
-  margin-right: 5px;
-  word-break: break-all;
-  white-space: normal;
-}
-
-.bold{
-  font-weight: bold;
 }
 
 .entry-content p {
   margin: 0;
-  font-size: 25px;
-  padding-bottom: 10px;
 }
 
-.entry-content2 p {
-  margin: 0;
-}
-
-/*.entry-content .entry-name {
+.entry-content .entry-attribution {
   margin-top: 8px;
   text-align: right;
   font-weight: bold;
 }
-*/
+
 #create-entry-button1 {
   position: fixed;
   right: 30px;
@@ -341,26 +263,6 @@ img {
   overflow: scroll;
 }
 
-#create-entry-modal2 {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 1010;
-  overflow: scroll;
-}
-
-#create-entry-modal3 {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 1010;
-  overflow: scroll;
-}
-
 .hidden {
   display: none;
 }
@@ -411,7 +313,6 @@ img {
   font-weight: 600;
   flex: 1 75px;
   margin-right: 10px;
-  text-align: center;
 }
 
 .entry-input-element input,
@@ -456,7 +357,7 @@ footer nav ul li{
 }
 
 footer nav ul li a{
-  font-family: Orbitron;
+  font-family: Lato;
   font-weight: 400;
   font-size: 14px;
   color:#fff;
@@ -498,21 +399,12 @@ footer nav ul li a{
 }
 
 .modal-footer .modal-accept-button {
-  background-color: #28e604;
-  color: #333;
-}
-
-.modal-footer .modal-accept-button2 {
-  background-color: #00c561;
-  color: #333;
+  background-color: #57b50c;
+  color: #fff;
 }
 
 .modal-footer .modal-accept-button:hover {
-  background-color: #eee;
-}
-
-.modal-footer .modal-accept-button2:hover {
-  background-color: #eee;
+  background-color: #087dde;
 }
 
 .error-container {
@@ -521,7 +413,6 @@ footer nav ul li a{
 }
 
 .error-container h2 {
-  font-family: Orbitron;
   margin: 10px 0;
   font-size: 96px;
   font-weight: 100;
@@ -529,138 +420,6 @@ footer nav ul li a{
 
 .error-container h3 {
   margin: 10px 0;
-  font-size: 50px;
-  font-weight: 400;
-}
-
-.error-container h4 {
-  margin: 10px 0;
   font-size: 36px;
   font-weight: 400;
-}
-
-.about-container {
-  margin: 100px;
-  margin-top: 50px;
-  text-align: center;
-  min-width: 400px;
-  border-radius: 25px;
-  border: 3px;
-  background-color: #ffffff;
-  border-style: outset;
-  border-color: #43840b;
-  background-image: url(https://www.transparenttextures.com/patterns/diamond-upholstery.png);
-}
-
-.about-container a:hover, a:focus {
-  color: #43840b;
-}
-
-.about-container h2 {
-  font-family: Orbitron;
-  margin: 50px 0px 50px 0px;
-  font-size: 60px;
-  font-weight: 100;
-}
-
-.about-container p {
-  margin: 10px;
-  padding: 0 50px 50px 50px;
-  font-size: 28px;
-  font-weight: 100;
-  text-align: justify;
-}
-
-.help-container {
-  margin: 100px;
-  margin-top: 50px;
-  text-align: center;
-  min-width: 400px;
-  border-radius: 25px;
-  border: 3px;
-  background-color: #ffffff;
-  border-style: outset;
-  border-color: #43840b;
-  background-image: url(https://www.transparenttextures.com/patterns/diamond-upholstery.png);
-}
-
-.help-container a:hover, a:focus {
-  color: #43840b;
-}
-
-.help-container h2 {
-  font-family: Orbitron;
-  margin: 50px 0px 50px 0px;
-  font-size: 60px;
-  font-weight: 100;
-}
-
-.help-container p {
-  margin: 10px;
-  padding: 0 50px 50px 50px;
-  font-size: 28px;
-  font-weight: 100;
-  text-align: justify;
-}
-
-.contact-container {
-  margin: 100px;
-  margin-top: 50px;
-  text-align: center;
-  min-width: 400px;
-  border-radius: 25px;
-  border: 3px;
-  background-color: #ffffff;
-  border-style: outset;
-  border-color: #43840b;
-  background-image: url(https://www.transparenttextures.com/patterns/diamond-upholstery.png);
-}
-
-.contact-container a:hover, a:focus {
-  color: #43840b;
-}
-
-.contact-container h2 {
-  font-family: Orbitron;
-  margin: 50px 0px 50px 0px;
-  font-size: 60px;
-  font-weight: 100;
-}
-
-.contact-container p {
-  margin: 10px;
-  padding: 0 50px 50px 50px;
-  font-size: 28px;
-  font-weight: 100;
-}
-
-.report-container {
-  margin: 100px;
-  margin-top: 50px;
-  text-align: center;
-  min-width: 400px;
-  border-radius: 25px;
-  border: 3px;
-  background-color: #ffffff;
-  border-style: outset;
-  border-color: #43840b;
-  background-image: url(https://www.transparenttextures.com/patterns/diamond-upholstery.png);
-}
-
-.report-container a:hover, a:focus {
-  color: #43840b;
-}
-
-.report-container h2 {
-  font-family: Orbitron;
-  margin: 50px 0px 50px 0px;
-  font-size: 60px;
-  font-weight: 100;
-}
-
-.report-container p {
-  margin: 10px;
-  padding: 0 50px 50px 50px;
-  font-size: 28px;
-  font-weight: 100;
 }
