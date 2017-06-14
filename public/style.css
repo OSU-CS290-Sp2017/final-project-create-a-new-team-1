@@ -154,6 +154,7 @@ img {
 
 .entry-container {
   margin: 35px 10%; /*Originally 50px 10%*/
+  margin-bottom: 135px;
   display: flex;
   flex-wrap: wrap;
 }
@@ -454,6 +455,7 @@ img {
   width: 100%;
   overflow: hidden;
   z-index: -999;
+  margin-top: 50px;
 }
 
 html{
@@ -598,6 +600,7 @@ html{
 .error-container {
   margin: 100px;
   margin-top: 50px;
+  margin-bottom: 150px;
   text-align: center;
 
 }
@@ -624,6 +627,7 @@ html{
 .about-container {
   margin: 100px;
   margin-top: 50px;
+  margin-bottom: 150px;
   text-align: center;
   min-width: 400px;
   border-radius: 25px;
@@ -656,6 +660,7 @@ html{
 .help-container {
   margin: 100px;
   margin-top: 50px;
+  margin-bottom: 150px;
   text-align: center;
   min-width: 400px;
   border-radius: 25px;
@@ -688,6 +693,7 @@ html{
 .contact-container {
   margin: 100px;
   margin-top: 50px;
+  margin-bottom: 150px;
   text-align: center;
   min-width: 400px;
   border-radius: 25px;
@@ -719,6 +725,7 @@ html{
 .report-container {
   margin: 100px;
   margin-top: 50px;
+  margin-bottom: 150px;
   text-align: center;
   min-width: 400px;
   border-radius: 25px;
