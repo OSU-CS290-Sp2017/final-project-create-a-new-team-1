@@ -30,7 +30,7 @@ app.post('/', function (req, res, next) {
   var entry = entryData;
 
   if (entry) { // ?
-    if (req && req.name) {
+    if (req && req.body.name) {
 
       var entryd = { // ??
         amount: req.body.amount,
